@@ -25,7 +25,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private bool _isEnemyDead;
     [SerializeField] private float _enemySpeed;
     
-    
     [Header("Invincible")] 
     [SerializeField] private float _invincibleTime = 10f;
     [SerializeField] private bool _isInvincible = false;
@@ -114,10 +113,14 @@ public class EnemyController : MonoBehaviour
     
     private void SetAnimation()
     {
-        float x = _agentAi.velocity.x;
-        float y = _agentAi.velocity.y;
-        _enemyAnim.SetFloat("moveX", x);
-        _enemyAnim.SetFloat("moveY", y);
+        
+        if (_agentAi.velocity.x != 0 || _agentAi.velocity.y != 0)
+        {
+            float x = _agentAi.velocity.x;
+            float y = _agentAi.velocity.y;
+            _enemyAnim.SetFloat("moveX", x);
+            _enemyAnim.SetFloat("moveY", y);
+        }
     }
 
     public bool IsTargetInRange()
