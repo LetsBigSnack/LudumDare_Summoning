@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1980902355638541908}
   - component: {fileID: 2494210627881965791}
   - component: {fileID: 1315997033694516022}
-  - component: {fileID: 3294531881671314498}
   m_Layer: 0
   m_Name: Skeleton_Soldier
   m_TagString: Untagged
@@ -107,15 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3294531881671314498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7063713966974331228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e41acf057e15c42a3727b58b6a3ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
