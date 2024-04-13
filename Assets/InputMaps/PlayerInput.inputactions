@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MouseMovement",
+                    "name": "CursorMovement",
                     "type": "PassThrough",
                     "id": "1af83a26-ec88-430c-8ae0-c864e1f6f7c9",
                     "expectedControlType": "Vector2",
@@ -228,7 +228,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MouseMovement",
+                    "action": "CursorMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -239,7 +239,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MouseMovement",
+                    "action": "CursorMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
