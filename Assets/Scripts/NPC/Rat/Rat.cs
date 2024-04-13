@@ -11,7 +11,7 @@ public class Rat : MonoBehaviour
     
     [SerializeField] private bool _isBeingSacrificed = false;
     [SerializeField] private float sacrificeTime = 2.0f;
-
+    
 
 
     public void StartSacrifice()

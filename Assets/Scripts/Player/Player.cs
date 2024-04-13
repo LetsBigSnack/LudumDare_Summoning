@@ -10,11 +10,20 @@ public class Player : MonoBehaviour
     [SerializeField] private float _maxSacrificeRadius = 3.0f;
     [SerializeField] private float _currentSacrificeRadius = 0.0f;
     [SerializeField] private float _sacrificeSpread = 0.5f;
-    
-    
-    [SerializeField]
-    private int _bloodMeter;
 
+    [Header("Player Stats")] 
+    [SerializeField] private int _playerLevel = 1;
+    [SerializeField] private int _bloodMeter;
+    [SerializeField] private int _playerHealth = 100;
+    [SerializeField] private int _playerMaxHealth = 100;
+    [SerializeField] private bool _isPlayerDead;
+    
+    [Header("Invincible")] 
+    [SerializeField] private float _invincibleTime = 10f;
+    [SerializeField] private bool _isInvincible = false;
+    [SerializeField] private bool _canInvincible = true;
+    [SerializeField] private float _invincibleCooldownTime = 3.0f;
+    
     public bool isMoving;
     
     // Start is called before the first frame update
@@ -78,6 +87,7 @@ public class Player : MonoBehaviour
         {
             if (hitCollider.CompareTag("Rat"))
             {
+                Debug.Log("RAT");
                 Rat tempRat = hitCollider.GetComponentInParent<Rat>();
                 tempRat.StartSacrifice();
             }
@@ -87,6 +97,34 @@ public class Player : MonoBehaviour
     void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _currentSacrificeRadius);
+    }
+
+
+    public void TakeDMG(int value)
+    {
+        if (!_isInvincible)
+        {
+            this._playerHealth -= value;
+            if (_canInvincible)
+            {
+                StartCoroutine(SetInvinciblility());
+            }
+        }
+        
+        if (_playerHealth <= 0)
+        {
+            _isPlayerDead = true;
+        }
+    }
+    
+    private IEnumerator SetInvinciblility()
+    {
+        _isInvincible = true;
+        _canInvincible = false;
+        yield return new WaitForSeconds(_invincibleTime);
+        _isInvincible = false;
+        yield return new WaitForSeconds(_invincibleCooldownTime);
+        _canInvincible = true;
     }
     
 }
