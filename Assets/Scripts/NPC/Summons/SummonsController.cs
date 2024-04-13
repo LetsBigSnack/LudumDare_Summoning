@@ -40,7 +40,7 @@ public class SummonsController : MonoBehaviour
     private Transform _hero;
     private float _summonHitRange;
 
-
+    public bool _isMelee;
     private Animator _summonAnim;
     public SummonState _currentState = SummonState.Following;
 
@@ -127,7 +127,10 @@ public class SummonsController : MonoBehaviour
     public IEnumerator Attack()
     {
         _canAttack = false;
-        HitHero();
+        if (_isMelee)
+        {
+            HitHero();
+        }
         _summonAnim.Play("Attack");
         Debug.Log("Attack");
         yield return new WaitForSeconds(_attackingCooldownTime);
