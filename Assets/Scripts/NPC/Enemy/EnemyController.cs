@@ -16,8 +16,6 @@ public enum EnemyState
 public class EnemyController : MonoBehaviour
 {
     
-    private Rigidbody2D _enemyRb;
-    
     [Header("NavMash_Setting")]
     private NavMeshAgent _agentAi;
     public Vector3 pointOfInterest;
