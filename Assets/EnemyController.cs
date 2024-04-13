@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     [Header("Target")]
     private Transform _player;
     
-    public EnemyState _currentState = EnemyState.Patrolling;
+    public EnemyState _currentState = EnemyState.Fighting;
 
     private void Awake()
     {
@@ -61,6 +61,10 @@ public class EnemyController : MonoBehaviour
         {
             case EnemyState.Patrolling:
                 _agentAi.SetDestination(pointOfInterest);
+                TravelToDestination();
+                break;
+            case EnemyState.Fighting:
+                _agentAi.SetDestination(_player.position);
                 TravelToDestination();
                 break;
         }
