@@ -46,9 +46,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""CursorMovement"",
+                    ""name"": ""MouseMovement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""1af83a26-ec88-430c-8ae0-c864e1f6f7c9"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GamepadCursorMove"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""e96a9402-4550-4d5d-8f59-d8a39feec0e4"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -250,18 +259,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CursorMovement"",
+                    ""action"": ""MouseMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""400f9448-ad64-40a2-aba4-3e2fd0a0bc9a"",
+                    ""id"": ""1ccb66ac-8866-4a35-abb3-0502d148f941"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CursorMovement"",
+                    ""action"": ""GamepadCursorMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -274,7 +283,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Sacrifice = m_Player.FindAction("Sacrifice", throwIfNotFound: true);
-        m_Player_CursorMovement = m_Player.FindAction("CursorMovement", throwIfNotFound: true);
+        m_Player_MouseMovement = m_Player.FindAction("MouseMovement", throwIfNotFound: true);
+        m_Player_GamepadCursorMove = m_Player.FindAction("GamepadCursorMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -338,14 +348,16 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Sacrifice;
-    private readonly InputAction m_Player_CursorMovement;
+    private readonly InputAction m_Player_MouseMovement;
+    private readonly InputAction m_Player_GamepadCursorMove;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Sacrifice => m_Wrapper.m_Player_Sacrifice;
-        public InputAction @CursorMovement => m_Wrapper.m_Player_CursorMovement;
+        public InputAction @MouseMovement => m_Wrapper.m_Player_MouseMovement;
+        public InputAction @GamepadCursorMove => m_Wrapper.m_Player_GamepadCursorMove;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -361,9 +373,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Sacrifice.started += instance.OnSacrifice;
             @Sacrifice.performed += instance.OnSacrifice;
             @Sacrifice.canceled += instance.OnSacrifice;
-            @CursorMovement.started += instance.OnCursorMovement;
-            @CursorMovement.performed += instance.OnCursorMovement;
-            @CursorMovement.canceled += instance.OnCursorMovement;
+            @MouseMovement.started += instance.OnMouseMovement;
+            @MouseMovement.performed += instance.OnMouseMovement;
+            @MouseMovement.canceled += instance.OnMouseMovement;
+            @GamepadCursorMove.started += instance.OnGamepadCursorMove;
+            @GamepadCursorMove.performed += instance.OnGamepadCursorMove;
+            @GamepadCursorMove.canceled += instance.OnGamepadCursorMove;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -374,9 +389,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Sacrifice.started -= instance.OnSacrifice;
             @Sacrifice.performed -= instance.OnSacrifice;
             @Sacrifice.canceled -= instance.OnSacrifice;
-            @CursorMovement.started -= instance.OnCursorMovement;
-            @CursorMovement.performed -= instance.OnCursorMovement;
-            @CursorMovement.canceled -= instance.OnCursorMovement;
+            @MouseMovement.started -= instance.OnMouseMovement;
+            @MouseMovement.performed -= instance.OnMouseMovement;
+            @MouseMovement.canceled -= instance.OnMouseMovement;
+            @GamepadCursorMove.started -= instance.OnGamepadCursorMove;
+            @GamepadCursorMove.performed -= instance.OnGamepadCursorMove;
+            @GamepadCursorMove.canceled -= instance.OnGamepadCursorMove;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -398,6 +416,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnSacrifice(InputAction.CallbackContext context);
-        void OnCursorMovement(InputAction.CallbackContext context);
+        void OnMouseMovement(InputAction.CallbackContext context);
+        void OnGamepadCursorMove(InputAction.CallbackContext context);
     }
 }

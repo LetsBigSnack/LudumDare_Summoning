@@ -24,9 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CursorMovement",
+                    "name": "MouseMovement",
                     "type": "PassThrough",
                     "id": "1af83a26-ec88-430c-8ae0-c864e1f6f7c9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GamepadCursorMove",
+                    "type": "PassThrough",
+                    "id": "e96a9402-4550-4d5d-8f59-d8a39feec0e4",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -228,18 +237,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CursorMovement",
+                    "action": "MouseMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "400f9448-ad64-40a2-aba4-3e2fd0a0bc9a",
+                    "id": "1ccb66ac-8866-4a35-abb3-0502d148f941",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CursorMovement",
+                    "action": "GamepadCursorMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
