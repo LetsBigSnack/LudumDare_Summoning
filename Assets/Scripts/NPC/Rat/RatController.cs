@@ -29,7 +29,7 @@ public class RatController : MonoBehaviour
     void Start()
     {
         
-        _rat = FindObjectOfType<Rat>();
+        _rat = GetComponent<Rat>();
         _player = FindObjectOfType<Player>().transform;
         _locationManager = FindObjectOfType<LocationManager>();
         _agentAi = GetComponent<UnityEngine.AI.NavMeshAgent>();
