@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
             MovePlayer();
             float x = _playerMoveVector.x;
             float y = _playerMoveVector.y;
+            _playerAnim.SetFloat("moveX", x);
+            _playerAnim.SetFloat("moveY", y);
         }
         else
         {
@@ -109,6 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("PRESS");
         _player.SetSacrifice(true);
+        _playerAnim.SetBool("isCharging", true);
         playerSpeed = 3f;
     }
 
@@ -116,6 +119,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("RELEASE");
         _player.SetSacrifice(false);
+        _playerAnim.SetBool("isCharging", false);
         playerSpeed = 10f;
     }
     

@@ -48,8 +48,9 @@ public class EnemyController : MonoBehaviour
     [Header("Target")]
     private Transform _player;
     private float _enemyHitRange;
-    
-    
+
+
+    private Animator _enemyAnim;
     public EnemyState _currentState = EnemyState.Fighting;
     
     // Start is called before the first frame update
@@ -57,6 +58,7 @@ public class EnemyController : MonoBehaviour
     {
         
         _player = FindObjectOfType<Player>().transform;
+        _enemyAnim = GetComponentInChildren<Animator>();
         _locationManager = FindObjectOfType<LocationManager>();
         _agentAi = GetComponent<NavMeshAgent>();
         _agentAi.updateRotation = false;
@@ -114,6 +116,8 @@ public class EnemyController : MonoBehaviour
     {
         float x = _agentAi.velocity.x;
         float y = _agentAi.velocity.y;
+        _enemyAnim.SetFloat("moveX", x);
+        _enemyAnim.SetFloat("moveY", y);
     }
 
     public bool IsTargetInRange()
@@ -146,8 +150,10 @@ public class EnemyController : MonoBehaviour
     {
         _canAttack = false;
         HitPlayer();
+        _enemyAnim.Play("Attack");
         Debug.Log("Attack");
         yield return new WaitForSeconds(_attackingCooldownTime);
+        Debug.Log("Done Attacking");
         _canAttack = true;
     }
     

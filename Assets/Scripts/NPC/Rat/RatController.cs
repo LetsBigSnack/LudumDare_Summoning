@@ -7,6 +7,7 @@ public class RatController : MonoBehaviour
 
 
     private Rat _rat;
+    private Animator _anim;
     
     [Header("NavMash_Setting")]
     private UnityEngine.AI.NavMeshAgent _agentAi;
@@ -30,6 +31,7 @@ public class RatController : MonoBehaviour
     {
         
         _rat = GetComponent<Rat>();
+        _anim = GetComponentInChildren<Animator>();
         _player = FindObjectOfType<Player>().transform;
         _locationManager = FindObjectOfType<LocationManager>();
         _agentAi = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -63,6 +65,8 @@ public class RatController : MonoBehaviour
     {
         float x = _agentAi.velocity.x;
         float y = _agentAi.velocity.y;
+        _anim.SetFloat("moveX", x);
+        _anim.SetFloat("moveY", y);
     }
 
     public void TravelToDestination()
