@@ -3,69 +3,58 @@ using UnityEngine.InputSystem;
 
 public class CursorFollow : MonoBehaviour
 {
+
+    public bool isGamepadUsed = false;
     private Vector2 cursorPosition;
     private PlayerInput playerControls;
     private Camera mainCamera;
 
-    // Track the last active input device
-    private bool lastInputWasGamepad = false;
-
     private void Awake()
     {
         playerControls = new PlayerInput();
-        mainCamera = Camera.main; // Cache the main camera for performance
-
-        // Attach input action for cursor movement
+        mainCamera = Camera.main;
+        
         playerControls.Player.MouseMovement.performed += ctx =>
         {
-            if (!lastInputWasGamepad)
-            {
-                cursorPosition = ctx.ReadValue<Vector2>(); // Update cursor position from mouse
-            }
+            isGamepadUsed = false;
+            Vector2 inputPos = ctx.ReadValue<Vector2>();
+            cursorPosition = inputPos;
         };
-        playerControls.Player.MouseMovement.canceled += ctx => cursorPosition = Vector2.zero;
-
+        
         playerControls.Player.GamepadCursorMove.performed += ctx =>
         {
-            lastInputWasGamepad = true; // Update flag on gamepad use
-            Vector2 gamepadInput = ctx.ReadValue<Vector2>();
-            cursorPosition += gamepadInput * Time.deltaTime * 5; // Adjust speed as necessary
+            isGamepadUsed = true;
+            Vector2 inputPos = ctx.ReadValue<Vector2>();
+            cursorPosition = inputPos;
         };
+        
         playerControls.Player.GamepadCursorMove.canceled += ctx =>
         {
-            lastInputWasGamepad = false;
-            cursorPosition = Vector2.zero;
+            Debug.Log("TWITTER");
+            isGamepadUsed = false;
         };
+        
+        
 
         playerControls.Enable();
     }
 
     private void LateUpdate()
     {
-        // Handle different inputs
-        if (!lastInputWasGamepad)
+        Vector3 targetPosition = Vector3.zero;
+        if (!isGamepadUsed)
         {
-            UpdatePositionFromMouse();
+            Vector3 screenPosition = new Vector3(cursorPosition.x, cursorPosition.y, 0);
+            float targetDepth = (transform.position - mainCamera.transform.position).z;
+            screenPosition.z = targetDepth;
+            targetPosition = mainCamera.ScreenToWorldPoint(screenPosition);
         }
         else
         {
-            UpdatePositionFromGamepad();
+            Vector3 deltaMove = new Vector3(cursorPosition.x, cursorPosition.y, 0) * Time.deltaTime * 5;
+            targetPosition = transform.position + deltaMove;
         }
-    }
 
-    private void UpdatePositionFromMouse()
-    {
-        Vector3 screenPosition = new Vector3(cursorPosition.x, cursorPosition.y, 0);
-        float targetDepth = (transform.position - mainCamera.transform.position).z;
-        screenPosition.z = targetDepth;
-        Vector3 worldPosition = mainCamera.ScreenToWorldPoint(screenPosition);
-        transform.position = ClampToWorldSpace(worldPosition);
-    }
-
-    private void UpdatePositionFromGamepad()
-    {
-        Vector3 deltaMove = new Vector3(cursorPosition.x, cursorPosition.y, 0) * Time.deltaTime * 5;
-        Vector3 targetPosition = transform.position + deltaMove;
         transform.position = ClampToWorldSpace(targetPosition);
     }
 
