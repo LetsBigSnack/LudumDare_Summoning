@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RatController : MonoBehaviour
 {
+
+
+    private Rat _rat;
     
     [Header("NavMash_Setting")]
     private UnityEngine.AI.NavMeshAgent _agentAi;
@@ -26,6 +29,7 @@ public class RatController : MonoBehaviour
     void Start()
     {
         
+        _rat = FindObjectOfType<Rat>();
         _player = FindObjectOfType<Player>().transform;
         _locationManager = FindObjectOfType<LocationManager>();
         _agentAi = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -44,8 +48,15 @@ public class RatController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _agentAi.SetDestination(pointOfInterest);
-        TravelToDestination();
+        if (_rat.GetBeingSacrificed())
+        {
+            _agentAi.ResetPath();
+        }
+        else
+        {
+            _agentAi.SetDestination(pointOfInterest);
+            TravelToDestination();
+        }
     }
     
     private void SetAnimation()

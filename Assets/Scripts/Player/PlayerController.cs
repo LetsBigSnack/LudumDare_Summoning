@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,11 @@ public class PlayerController : MonoBehaviour
         // Movement
         _input.Player.Movement.performed += OnMovePlayerPerfomred;
         _input.Player.Movement.canceled += OnMovePlayerCancelled;
+        
+        // Sacrifice
+        _input.Player.Sacrifice.performed += OnSacrificePlayerPerfomred;
+        _input.Player.Sacrifice.canceled += OnSacrificePlayerCancelled;
+        
     }
 
     private void OnDisable()
@@ -45,6 +51,10 @@ public class PlayerController : MonoBehaviour
         _input.Player.Movement.canceled -= OnMovePlayerCancelled;
         _input.Player.Movement.Disable();
         
+        // Sacrifice
+        _input.Player.Sacrifice.performed -= OnSacrificePlayerPerfomred;
+        _input.Player.Sacrifice.canceled -= OnSacrificePlayerCancelled;
+        _input.Player.Sacrifice.Disable();
     }
 
     private void OnDestroy()
@@ -90,6 +100,23 @@ public class PlayerController : MonoBehaviour
     {
         _playerMoveVector = Vector2.zero;
         _player.isMoving = false;
+    }
+    
+    
+    // Sacrifice
+
+    void OnSacrificePlayerPerfomred(InputAction.CallbackContext value)
+    {
+        Debug.Log("PRESS");
+        _player.SetSacrifice(true);
+        playerSpeed = 3f;
+    }
+
+    void OnSacrificePlayerCancelled(InputAction.CallbackContext value)
+    {
+        Debug.Log("RELEASE");
+        _player.SetSacrifice(false);
+        playerSpeed = 10f;
     }
     
 }
