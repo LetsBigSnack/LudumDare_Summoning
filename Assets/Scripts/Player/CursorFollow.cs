@@ -73,4 +73,13 @@ public class CursorFollow : MonoBehaviour
     {
         playerControls.Disable();
     }
+
+
+    public void SpawnObject(GameObject obj)
+    {
+        Transform t = transform;
+        Quaternion rotation = t.rotation;
+        Instantiate(obj, t.position, rotation);
+    }
+    
 }

@@ -62,6 +62,42 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleSummon"",
+                    ""type"": ""Button"",
+                    ""id"": ""817b2bd9-269c-46c6-8dd6-f33971b616b8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Summon"",
+                    ""type"": ""Button"",
+                    ""id"": ""c581cf39-75ae-4de9-ad96-bc506df56d12"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3b358c2-afd0-4765-95d1-888437c43185"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""ecaece93-4d1d-4bb5-aff7-d51c014996a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -273,6 +309,61 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""GamepadCursorMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fd94b90-6296-4e0d-b54a-2285cd9de55d"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleSummon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46fac143-a597-4b31-a4ef-392af3c38c5b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Summon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf5dd506-18a4-4f01-b45f-375a94f185d2"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Summon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""806a5999-f0a5-4907-8931-3adec501c9b9"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""23742eec-e95e-4ea2-9c99-de305fc0c571"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -285,6 +376,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Sacrifice = m_Player.FindAction("Sacrifice", throwIfNotFound: true);
         m_Player_MouseMovement = m_Player.FindAction("MouseMovement", throwIfNotFound: true);
         m_Player_GamepadCursorMove = m_Player.FindAction("GamepadCursorMove", throwIfNotFound: true);
+        m_Player_ToggleSummon = m_Player.FindAction("ToggleSummon", throwIfNotFound: true);
+        m_Player_Summon = m_Player.FindAction("Summon", throwIfNotFound: true);
+        m_Player_ToggleUp = m_Player.FindAction("ToggleUp", throwIfNotFound: true);
+        m_Player_ToggleDown = m_Player.FindAction("ToggleDown", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +445,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sacrifice;
     private readonly InputAction m_Player_MouseMovement;
     private readonly InputAction m_Player_GamepadCursorMove;
+    private readonly InputAction m_Player_ToggleSummon;
+    private readonly InputAction m_Player_Summon;
+    private readonly InputAction m_Player_ToggleUp;
+    private readonly InputAction m_Player_ToggleDown;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -358,6 +457,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Sacrifice => m_Wrapper.m_Player_Sacrifice;
         public InputAction @MouseMovement => m_Wrapper.m_Player_MouseMovement;
         public InputAction @GamepadCursorMove => m_Wrapper.m_Player_GamepadCursorMove;
+        public InputAction @ToggleSummon => m_Wrapper.m_Player_ToggleSummon;
+        public InputAction @Summon => m_Wrapper.m_Player_Summon;
+        public InputAction @ToggleUp => m_Wrapper.m_Player_ToggleUp;
+        public InputAction @ToggleDown => m_Wrapper.m_Player_ToggleDown;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -379,6 +482,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @GamepadCursorMove.started += instance.OnGamepadCursorMove;
             @GamepadCursorMove.performed += instance.OnGamepadCursorMove;
             @GamepadCursorMove.canceled += instance.OnGamepadCursorMove;
+            @ToggleSummon.started += instance.OnToggleSummon;
+            @ToggleSummon.performed += instance.OnToggleSummon;
+            @ToggleSummon.canceled += instance.OnToggleSummon;
+            @Summon.started += instance.OnSummon;
+            @Summon.performed += instance.OnSummon;
+            @Summon.canceled += instance.OnSummon;
+            @ToggleUp.started += instance.OnToggleUp;
+            @ToggleUp.performed += instance.OnToggleUp;
+            @ToggleUp.canceled += instance.OnToggleUp;
+            @ToggleDown.started += instance.OnToggleDown;
+            @ToggleDown.performed += instance.OnToggleDown;
+            @ToggleDown.canceled += instance.OnToggleDown;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -395,6 +510,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @GamepadCursorMove.started -= instance.OnGamepadCursorMove;
             @GamepadCursorMove.performed -= instance.OnGamepadCursorMove;
             @GamepadCursorMove.canceled -= instance.OnGamepadCursorMove;
+            @ToggleSummon.started -= instance.OnToggleSummon;
+            @ToggleSummon.performed -= instance.OnToggleSummon;
+            @ToggleSummon.canceled -= instance.OnToggleSummon;
+            @Summon.started -= instance.OnSummon;
+            @Summon.performed -= instance.OnSummon;
+            @Summon.canceled -= instance.OnSummon;
+            @ToggleUp.started -= instance.OnToggleUp;
+            @ToggleUp.performed -= instance.OnToggleUp;
+            @ToggleUp.canceled -= instance.OnToggleUp;
+            @ToggleDown.started -= instance.OnToggleDown;
+            @ToggleDown.performed -= instance.OnToggleDown;
+            @ToggleDown.canceled -= instance.OnToggleDown;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -418,5 +545,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSacrifice(InputAction.CallbackContext context);
         void OnMouseMovement(InputAction.CallbackContext context);
         void OnGamepadCursorMove(InputAction.CallbackContext context);
+        void OnToggleSummon(InputAction.CallbackContext context);
+        void OnSummon(InputAction.CallbackContext context);
+        void OnToggleUp(InputAction.CallbackContext context);
+        void OnToggleDown(InputAction.CallbackContext context);
     }
 }
