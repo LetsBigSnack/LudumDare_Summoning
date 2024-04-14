@@ -126,5 +126,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(_invincibleCooldownTime);
         _canInvincible = true;
     }
-    
+
+    public int GetHealth()
+    {
+        return _playerHealth;
+    }
 }

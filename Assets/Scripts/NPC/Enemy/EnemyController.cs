@@ -10,7 +10,6 @@ using UnityEngine.UIElements;
 
 public enum EnemyState
 {
-    Patrolling,
     Fighting,
     Attacking
 }
@@ -78,10 +77,6 @@ public class EnemyController : MonoBehaviour
     {
         switch (_currentState)
         {
-            case EnemyState.Patrolling:
-                _agentAi.SetDestination(pointOfInterest);
-                TravelToDestination();
-                break;
             case EnemyState.Fighting:
                 if (!IsTargetInRange())
                 {

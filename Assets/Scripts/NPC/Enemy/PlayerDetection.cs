@@ -28,7 +28,7 @@ public class PlayerDetection : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _enemyController._currentState = EnemyState.Patrolling;
+            //_enemyController._currentState = EnemyState.Patrolling;
         }
     }
 }
