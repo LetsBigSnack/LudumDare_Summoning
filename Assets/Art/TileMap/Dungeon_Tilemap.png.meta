@@ -1,0 +1,2424 @@
+fileFormatVersion: 2
+guid: cfd7269c51390eb439e638699288b988
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba8b6ba20a113c4abf800763dfda567
+      internalID: 659264453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6244f94e64a497942a779834c17c6280
+      internalID: -1145953474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8d1c7a80c524c4c81aeb45ceb6d35a
+      internalID: 2025573655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55ef5f10c6e83e4980bd379947c7b24
+      internalID: 2138917586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447dd8f266affc448b60486346b30443
+      internalID: 2122395982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444c30a180369db4fa33faa2a6862451
+      internalID: -1116546707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87274afe4c662cf468f12733eb8e4c14
+      internalID: 1022328604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68329369189c6664c8ef4985c19f1385
+      internalID: -302229665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e24e59839e26741afa6615eab58620
+      internalID: 1133778845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3eb6fae9089d949973e66fdbd5e223
+      internalID: -411639460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cea3ec176a2084faa4a9cd0ae71737
+      internalID: 1618976316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ae4436760e0b747b90ba067e2f8306
+      internalID: -1589442357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3658efc8cc1791f4a8daccfcfa43b25c
+      internalID: -80227538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e039e7578d3c034f8d2d46d18c3d51a
+      internalID: -1371917869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57615193ae7e9fe4e95c8eaa07eee63e
+      internalID: -1361893827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad0d45bff5b0f14cbe698377c946c1a
+      internalID: -384531153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad60293c87ed0a48aaa3f4ad92ac0ab
+      internalID: 1944920084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cacfd11ed56434aa1dac584d8e83f4
+      internalID: 1321762393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_51
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458d34320d17f83429e018a3aebed374
+      internalID: -97304588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bed9a33a8cced84aa90e899b8dce402
+      internalID: 260455984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_55
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc6140d104597f408111e3f68cb4fd1
+      internalID: -1353351360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_57
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4533a89174a95174da94cde446d7cf97
+      internalID: -414255898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_58
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc761931d54754046ba26baa5dfa63cd
+      internalID: 1483110905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_59
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8383f910f8f11d344a65a0dc62dd3050
+      internalID: 261363365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_65
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af25762801dc6944b2169a6e8454356
+      internalID: -115313226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5ad3fef5f5ba347beea103aca11be4
+      internalID: -1409516944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_80
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f391fd7376ea314791e3ed8b40aed15
+      internalID: -218960760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_81
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df47d958aa9eb524e8912775eda6a547
+      internalID: 416858331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_84
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fecdf70977256a42bedf313f06f7f8d
+      internalID: 828479511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_85
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aeff03786ee5f541bdd71e40cb588e5
+      internalID: 1708602190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_87
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf64fa0302a9c54689bc79791cf600a
+      internalID: -1753676624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_88
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19eeb72e19310d84fbf5752b632f481d
+      internalID: -1153909583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_89
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535537485fdff6d40b95f6b62351ee8d
+      internalID: 12628038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_93
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f204c3c542be244b0698f0e9cfddcd
+      internalID: -1379968645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_94
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852c7f20570da044684cde1e0fc1d600
+      internalID: 617037203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_114
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14d91e58f4e6ea499f5fae2341c08af
+      internalID: -1425423043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_115
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ac528ff9677c44ebaa29142ef2c952
+      internalID: 727666032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_119
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d8a153ceff34a4eae90f6e404e915e
+      internalID: 2093852518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_122
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9461445f9cc39d343b9494662a3c9dba
+      internalID: -1637627055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_123
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29339192d3c85474c916f723fd2cde62
+      internalID: 794793044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_124
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3fb810a9e88634ba6cd9456fe525ae
+      internalID: -1532348080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_138
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e815067ed6e6424f81a140fcaa0ca69
+      internalID: -1063127239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_140
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a01a45660867144a841b0475acfd79d
+      internalID: 1488850940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_144
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b93c3f9a16540c4ca81b4f8d3bc5e49
+      internalID: -800207805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_145
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a31e9e32967444c822722b8f2292d2
+      internalID: -1719955320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_149
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ec2dc22f0417048ba0468e21bf1d4c
+      internalID: 1038733656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_153
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd15039f82d15d4385e306f15fedb35
+      internalID: -1079499672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_154
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fbdd067b29f0f4e9392662f11e0224
+      internalID: -13069360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_173
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8fd332b5d46f042b8e1be932ae052f
+      internalID: 594116858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_174
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9359dff18b805b946b57a0b1e550bed9
+      internalID: 895438877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_175
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5aefadc90da264baaf258b44d00ca5
+      internalID: 679739685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_176
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccc98ebfc5587649b24455f7cddbe49
+      internalID: -678171008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_179
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2fbf0441e744f488d4db804b7252df
+      internalID: 1908326642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_182
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88b0f764c83844498e243c37c1bcf0e
+      internalID: 1748661660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_183
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b172a31601460644a983c2a072829951
+      internalID: 1444641378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_184
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bf0c085300ae8448fcbf7683d04ce6
+      internalID: -889020818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_203
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223efcf3767e5104c9c67dd9189afbdd
+      internalID: -316152096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_204
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec09000927cf2340846d468f2d18d83
+      internalID: -914643280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_205
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2bd129a8db3784185e8018fdd17702
+      internalID: -527997283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_206
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a4fd99e8322bd43b2372384c4d3b2e
+      internalID: 1504192049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_209
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a31d385a5508ee43a55c675cabb3758
+      internalID: -77718082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_233
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232f05bfd369ce148b37befb9ae67202
+      internalID: -696172546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_234
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1dd0ee4ee67874eb4940652277a62b
+      internalID: -387696685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_235
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c5f68762fd16144b6122c8bd12697b
+      internalID: -1923288105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_236
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b0e0b99a5f68b44a113c70988180d0
+      internalID: 179690271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_270
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d80ff25697e67498e9fb3432f12dbd
+      internalID: 1547163640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_299
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545489462859ddf408a52f521e70522c
+      internalID: 1560257306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_300
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6107c630ef33f7f48b02410e147a8b40
+      internalID: 932327865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_329
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b756259e9b0b34ca9af4f510c1920d
+      internalID: 1964911684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_359
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411aa37b23b64e7468d79c0895380ef3
+      internalID: 2012409473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_420
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7277eb4e14680d34b90d409ab00c823a
+      internalID: 305783006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_450
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc23a70ead5f8b64c80b7e070f7b1fed
+      internalID: 2039000069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_480
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3563b743cbd1148b030e394bf97962
+      internalID: 496900893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_481
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a6eaf691ce5a84393beda8885a65a6
+      internalID: 1837898442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_482
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8731de2374404414f9f46b001149f0b9
+      internalID: 1349803853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_486
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57890c4a2da16614d91d2a75f5e4ff0a
+      internalID: 695576525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_487
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d791a1e3a26ed34d9b9b32ac55335f4
+      internalID: -1553970791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_488
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe389a2d187a544ea3e91b24a4e8365
+      internalID: 526894507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_497
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccf87371998ef9409bb4b21ffdf712e
+      internalID: -1036377577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_507
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47b79f35558ca547b0d12e3f19cddea
+      internalID: -50011936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_508
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85ab278a0a108e4286181247f828d94
+      internalID: -1434589508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_Tilemap_509
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75564e0faaf2ce644931cc36c2c28240
+      internalID: -1335398103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dungeon_Tilemap_0: 659264453
+      Dungeon_Tilemap_1: -1145953474
+      Dungeon_Tilemap_10: -484526398
+      Dungeon_Tilemap_100: 1318230006
+      Dungeon_Tilemap_101: 1630739759
+      Dungeon_Tilemap_102: 1238459070
+      Dungeon_Tilemap_103: 537873256
+      Dungeon_Tilemap_104: 1215801160
+      Dungeon_Tilemap_105: 287749601
+      Dungeon_Tilemap_106: 371257167
+      Dungeon_Tilemap_107: -247885187
+      Dungeon_Tilemap_108: -1410663046
+      Dungeon_Tilemap_109: 1953161365
+      Dungeon_Tilemap_11: -1858775975
+      Dungeon_Tilemap_110: 580609298
+      Dungeon_Tilemap_111: -314820440
+      Dungeon_Tilemap_112: -1065527640
+      Dungeon_Tilemap_113: -1086734179
+      Dungeon_Tilemap_114: -1425423043
+      Dungeon_Tilemap_115: 727666032
+      Dungeon_Tilemap_116: 1364305853
+      Dungeon_Tilemap_117: 1163674130
+      Dungeon_Tilemap_118: 1674132349
+      Dungeon_Tilemap_119: 2093852518
+      Dungeon_Tilemap_12: 1716148161
+      Dungeon_Tilemap_120: 368070079
+      Dungeon_Tilemap_121: -699852640
+      Dungeon_Tilemap_122: -1637627055
+      Dungeon_Tilemap_123: 794793044
+      Dungeon_Tilemap_124: -1532348080
+      Dungeon_Tilemap_125: 860698723
+      Dungeon_Tilemap_126: -1553878042
+      Dungeon_Tilemap_127: 1310674858
+      Dungeon_Tilemap_128: -2118326332
+      Dungeon_Tilemap_129: 319806978
+      Dungeon_Tilemap_13: 122642141
+      Dungeon_Tilemap_130: -1455312621
+      Dungeon_Tilemap_131: 1614846985
+      Dungeon_Tilemap_132: -272347713
+      Dungeon_Tilemap_133: 581952871
+      Dungeon_Tilemap_134: -1177795919
+      Dungeon_Tilemap_135: 95672531
+      Dungeon_Tilemap_136: 2118644562
+      Dungeon_Tilemap_137: -1294940779
+      Dungeon_Tilemap_138: -1063127239
+      Dungeon_Tilemap_139: -106753874
+      Dungeon_Tilemap_14: 1916821035
+      Dungeon_Tilemap_140: 1488850940
+      Dungeon_Tilemap_141: 191189487
+      Dungeon_Tilemap_142: 806029390
+      Dungeon_Tilemap_143: 1190996068
+      Dungeon_Tilemap_144: -800207805
+      Dungeon_Tilemap_145: -1719955320
+      Dungeon_Tilemap_146: -2029618899
+      Dungeon_Tilemap_147: -2045043723
+      Dungeon_Tilemap_148: 1895872554
+      Dungeon_Tilemap_149: 1038733656
+      Dungeon_Tilemap_15: -1080326458
+      Dungeon_Tilemap_150: -1462204103
+      Dungeon_Tilemap_151: -1345498719
+      Dungeon_Tilemap_152: 92948748
+      Dungeon_Tilemap_153: -1079499672
+      Dungeon_Tilemap_154: -13069360
+      Dungeon_Tilemap_155: 461244788
+      Dungeon_Tilemap_156: -1813849711
+      Dungeon_Tilemap_157: -73888180
+      Dungeon_Tilemap_158: 1101964923
+      Dungeon_Tilemap_159: -2009668055
+      Dungeon_Tilemap_16: 1022328604
+      Dungeon_Tilemap_160: 1926574289
+      Dungeon_Tilemap_161: 2085255351
+      Dungeon_Tilemap_162: 65109188
+      Dungeon_Tilemap_163: 343051221
+      Dungeon_Tilemap_164: -576754651
+      Dungeon_Tilemap_165: -9480168
+      Dungeon_Tilemap_166: -655358836
+      Dungeon_Tilemap_167: -932884529
+      Dungeon_Tilemap_168: 1018323810
+      Dungeon_Tilemap_169: 588518350
+      Dungeon_Tilemap_17: -1645104830
+      Dungeon_Tilemap_170: -1660362068
+      Dungeon_Tilemap_171: 1935624267
+      Dungeon_Tilemap_172: -236209746
+      Dungeon_Tilemap_173: 594116858
+      Dungeon_Tilemap_174: 895438877
+      Dungeon_Tilemap_175: 679739685
+      Dungeon_Tilemap_176: -678171008
+      Dungeon_Tilemap_177: 476798718
+      Dungeon_Tilemap_178: -635485975
+      Dungeon_Tilemap_179: 1908326642
+      Dungeon_Tilemap_18: -1558170032
+      Dungeon_Tilemap_180: -448504927
+      Dungeon_Tilemap_181: -2084729931
+      Dungeon_Tilemap_182: 1748661660
+      Dungeon_Tilemap_183: 1444641378
+      Dungeon_Tilemap_184: -889020818
+      Dungeon_Tilemap_185: -2070096714
+      Dungeon_Tilemap_186: -1469631182
+      Dungeon_Tilemap_187: -299093968
+      Dungeon_Tilemap_188: -613913964
+      Dungeon_Tilemap_189: -1435725692
+      Dungeon_Tilemap_19: 1399081947
+      Dungeon_Tilemap_190: -1407628897
+      Dungeon_Tilemap_191: -703292643
+      Dungeon_Tilemap_192: -122667629
+      Dungeon_Tilemap_193: 1309096756
+      Dungeon_Tilemap_194: 959537498
+      Dungeon_Tilemap_195: 1224766879
+      Dungeon_Tilemap_196: 2146935169
+      Dungeon_Tilemap_197: 1621676362
+      Dungeon_Tilemap_198: -1368696842
+      Dungeon_Tilemap_199: 92731888
+      Dungeon_Tilemap_2: 2025573655
+      Dungeon_Tilemap_20: 1667209102
+      Dungeon_Tilemap_200: 440836225
+      Dungeon_Tilemap_201: 1516393647
+      Dungeon_Tilemap_202: -1845393720
+      Dungeon_Tilemap_203: -316152096
+      Dungeon_Tilemap_204: -914643280
+      Dungeon_Tilemap_205: -527997283
+      Dungeon_Tilemap_206: 1504192049
+      Dungeon_Tilemap_207: 163485949
+      Dungeon_Tilemap_208: -750520241
+      Dungeon_Tilemap_209: -77718082
+      Dungeon_Tilemap_21: -302229665
+      Dungeon_Tilemap_210: 920402270
+      Dungeon_Tilemap_211: 920146509
+      Dungeon_Tilemap_212: 1129862591
+      Dungeon_Tilemap_213: 123696495
+      Dungeon_Tilemap_214: -1079754642
+      Dungeon_Tilemap_215: -1463672473
+      Dungeon_Tilemap_216: 1269234761
+      Dungeon_Tilemap_217: -855503234
+      Dungeon_Tilemap_218: 2141657199
+      Dungeon_Tilemap_219: -366587476
+      Dungeon_Tilemap_22: -326987976
+      Dungeon_Tilemap_220: 639246490
+      Dungeon_Tilemap_221: -1523805422
+      Dungeon_Tilemap_222: -1586478880
+      Dungeon_Tilemap_223: 1799645810
+      Dungeon_Tilemap_224: 1021828269
+      Dungeon_Tilemap_225: 344310904
+      Dungeon_Tilemap_226: 1945760400
+      Dungeon_Tilemap_227: -1330610176
+      Dungeon_Tilemap_228: 2127796057
+      Dungeon_Tilemap_229: 1012109290
+      Dungeon_Tilemap_23: 1133778845
+      Dungeon_Tilemap_230: 974265189
+      Dungeon_Tilemap_231: -772039188
+      Dungeon_Tilemap_232: -1305468149
+      Dungeon_Tilemap_233: -696172546
+      Dungeon_Tilemap_234: -387696685
+      Dungeon_Tilemap_235: -1923288105
+      Dungeon_Tilemap_236: 179690271
+      Dungeon_Tilemap_237: 2118508309
+      Dungeon_Tilemap_238: 1599233648
+      Dungeon_Tilemap_239: -870975764
+      Dungeon_Tilemap_24: -411639460
+      Dungeon_Tilemap_240: -1426300113
+      Dungeon_Tilemap_241: -1209277616
+      Dungeon_Tilemap_242: -1224483970
+      Dungeon_Tilemap_243: 777842902
+      Dungeon_Tilemap_244: -408006485
+      Dungeon_Tilemap_245: -535933528
+      Dungeon_Tilemap_246: -1565911743
+      Dungeon_Tilemap_247: 1076137497
+      Dungeon_Tilemap_248: -46059473
+      Dungeon_Tilemap_249: -692995503
+      Dungeon_Tilemap_25: 1618976316
+      Dungeon_Tilemap_250: 1006856733
+      Dungeon_Tilemap_251: -652834470
+      Dungeon_Tilemap_252: -1745753809
+      Dungeon_Tilemap_253: -1501161448
+      Dungeon_Tilemap_254: -1274896113
+      Dungeon_Tilemap_255: -149966524
+      Dungeon_Tilemap_256: -649886019
+      Dungeon_Tilemap_257: 499418314
+      Dungeon_Tilemap_258: -632319968
+      Dungeon_Tilemap_259: -1280830095
+      Dungeon_Tilemap_26: -1589442357
+      Dungeon_Tilemap_260: 431131891
+      Dungeon_Tilemap_261: -2060589124
+      Dungeon_Tilemap_262: 145709436
+      Dungeon_Tilemap_263: 752197373
+      Dungeon_Tilemap_264: 1006375779
+      Dungeon_Tilemap_265: 674485931
+      Dungeon_Tilemap_266: -1674272631
+      Dungeon_Tilemap_267: -1658346104
+      Dungeon_Tilemap_268: 183113580
+      Dungeon_Tilemap_269: -327624660
+      Dungeon_Tilemap_27: -80227538
+      Dungeon_Tilemap_270: 1547163640
+      Dungeon_Tilemap_271: 1144891858
+      Dungeon_Tilemap_272: -2027271485
+      Dungeon_Tilemap_273: 937246463
+      Dungeon_Tilemap_274: -1716647840
+      Dungeon_Tilemap_275: 1402815042
+      Dungeon_Tilemap_276: 1394984322
+      Dungeon_Tilemap_277: 1852311424
+      Dungeon_Tilemap_278: -228644014
+      Dungeon_Tilemap_279: 2130067703
+      Dungeon_Tilemap_28: -1371917869
+      Dungeon_Tilemap_280: -365905127
+      Dungeon_Tilemap_281: -360804463
+      Dungeon_Tilemap_282: -2066361009
+      Dungeon_Tilemap_283: -1850166791
+      Dungeon_Tilemap_284: 837739715
+      Dungeon_Tilemap_285: -638898978
+      Dungeon_Tilemap_286: -1615659875
+      Dungeon_Tilemap_287: -941412504
+      Dungeon_Tilemap_288: 2022174876
+      Dungeon_Tilemap_289: -426767296
+      Dungeon_Tilemap_29: -1361893827
+      Dungeon_Tilemap_290: 480707890
+      Dungeon_Tilemap_291: 2139865572
+      Dungeon_Tilemap_292: 55271900
+      Dungeon_Tilemap_293: -227216432
+      Dungeon_Tilemap_294: 1072338387
+      Dungeon_Tilemap_295: -497478511
+      Dungeon_Tilemap_296: -581082904
+      Dungeon_Tilemap_297: -1947318741
+      Dungeon_Tilemap_298: 114942814
+      Dungeon_Tilemap_299: 1560257306
+      Dungeon_Tilemap_3: 2138917586
+      Dungeon_Tilemap_30: -1146281310
+      Dungeon_Tilemap_300: 932327865
+      Dungeon_Tilemap_301: -984818229
+      Dungeon_Tilemap_302: -2059702183
+      Dungeon_Tilemap_303: -90085775
+      Dungeon_Tilemap_304: -1137452237
+      Dungeon_Tilemap_305: 403552617
+      Dungeon_Tilemap_306: 409970735
+      Dungeon_Tilemap_307: -1902979387
+      Dungeon_Tilemap_308: 814214993
+      Dungeon_Tilemap_309: 1561463006
+      Dungeon_Tilemap_31: -1973205291
+      Dungeon_Tilemap_310: 724918621
+      Dungeon_Tilemap_311: 1039345646
+      Dungeon_Tilemap_312: -726675431
+      Dungeon_Tilemap_313: -2128575180
+      Dungeon_Tilemap_314: 135954288
+      Dungeon_Tilemap_315: 2110219008
+      Dungeon_Tilemap_316: -2136130237
+      Dungeon_Tilemap_317: -1185732946
+      Dungeon_Tilemap_318: 886882802
+      Dungeon_Tilemap_319: 133150401
+      Dungeon_Tilemap_32: 803915227
+      Dungeon_Tilemap_320: 544290809
+      Dungeon_Tilemap_321: -1594969967
+      Dungeon_Tilemap_322: -619985566
+      Dungeon_Tilemap_323: -727248239
+      Dungeon_Tilemap_324: -555708615
+      Dungeon_Tilemap_325: -269456972
+      Dungeon_Tilemap_326: 1432137760
+      Dungeon_Tilemap_327: -1895195888
+      Dungeon_Tilemap_328: -1748005888
+      Dungeon_Tilemap_329: 1964911684
+      Dungeon_Tilemap_33: 1303479916
+      Dungeon_Tilemap_330: 1166225512
+      Dungeon_Tilemap_331: -30440235
+      Dungeon_Tilemap_332: -1332567500
+      Dungeon_Tilemap_333: -1278939624
+      Dungeon_Tilemap_334: 1146480808
+      Dungeon_Tilemap_335: -47705804
+      Dungeon_Tilemap_336: 1855834552
+      Dungeon_Tilemap_337: 161497859
+      Dungeon_Tilemap_338: -1764581630
+      Dungeon_Tilemap_339: 887744752
+      Dungeon_Tilemap_34: 1362112609
+      Dungeon_Tilemap_340: -1421990178
+      Dungeon_Tilemap_341: -864526057
+      Dungeon_Tilemap_342: -1760627878
+      Dungeon_Tilemap_343: -354565380
+      Dungeon_Tilemap_344: 1920965893
+      Dungeon_Tilemap_345: 714503704
+      Dungeon_Tilemap_346: -1235414650
+      Dungeon_Tilemap_347: -898365491
+      Dungeon_Tilemap_348: -188494734
+      Dungeon_Tilemap_349: 1281401617
+      Dungeon_Tilemap_35: -384531153
+      Dungeon_Tilemap_350: -1870460922
+      Dungeon_Tilemap_351: 31895573
+      Dungeon_Tilemap_352: 1337140026
+      Dungeon_Tilemap_353: 1029843147
+      Dungeon_Tilemap_354: 2125439599
+      Dungeon_Tilemap_355: -1833587338
+      Dungeon_Tilemap_356: -689497769
+      Dungeon_Tilemap_357: -1534279323
+      Dungeon_Tilemap_358: 1356995111
+      Dungeon_Tilemap_359: 2012409473
+      Dungeon_Tilemap_36: -771118746
+      Dungeon_Tilemap_360: -1240988763
+      Dungeon_Tilemap_361: -221835123
+      Dungeon_Tilemap_362: 2082719308
+      Dungeon_Tilemap_363: -1455943121
+      Dungeon_Tilemap_364: -562396075
+      Dungeon_Tilemap_365: -3225061
+      Dungeon_Tilemap_366: 80562598
+      Dungeon_Tilemap_367: -1694284986
+      Dungeon_Tilemap_368: 189689949
+      Dungeon_Tilemap_369: -876386709
+      Dungeon_Tilemap_37: 679054761
+      Dungeon_Tilemap_370: 1502802220
+      Dungeon_Tilemap_371: 1610555193
+      Dungeon_Tilemap_372: -693064558
+      Dungeon_Tilemap_373: -630994047
+      Dungeon_Tilemap_374: 1439764909
+      Dungeon_Tilemap_375: -1886111649
+      Dungeon_Tilemap_376: -291433761
+      Dungeon_Tilemap_377: 1527410297
+      Dungeon_Tilemap_378: 1880281248
+      Dungeon_Tilemap_379: 889836091
+      Dungeon_Tilemap_38: -62874634
+      Dungeon_Tilemap_380: -1874442562
+      Dungeon_Tilemap_381: -2063677373
+      Dungeon_Tilemap_382: -1407803387
+      Dungeon_Tilemap_383: 780512345
+      Dungeon_Tilemap_384: 1694356811
+      Dungeon_Tilemap_385: 1263041845
+      Dungeon_Tilemap_386: -1259958174
+      Dungeon_Tilemap_387: 940717369
+      Dungeon_Tilemap_388: 1904707044
+      Dungeon_Tilemap_389: -1399953513
+      Dungeon_Tilemap_39: 1934377449
+      Dungeon_Tilemap_390: -1631863320
+      Dungeon_Tilemap_391: -1121489529
+      Dungeon_Tilemap_392: 1078080761
+      Dungeon_Tilemap_393: 1953512768
+      Dungeon_Tilemap_394: -118415049
+      Dungeon_Tilemap_395: 1575155636
+      Dungeon_Tilemap_396: -772378020
+      Dungeon_Tilemap_397: -238490772
+      Dungeon_Tilemap_398: -239041740
+      Dungeon_Tilemap_399: 1503358283
+      Dungeon_Tilemap_4: 2122395982
+      Dungeon_Tilemap_40: -1894891357
+      Dungeon_Tilemap_400: -1064745966
+      Dungeon_Tilemap_401: 1844979793
+      Dungeon_Tilemap_402: -1343507747
+      Dungeon_Tilemap_403: -1695862996
+      Dungeon_Tilemap_404: 416464709
+      Dungeon_Tilemap_405: -548434875
+      Dungeon_Tilemap_406: 344058407
+      Dungeon_Tilemap_407: 394945783
+      Dungeon_Tilemap_408: 666326386
+      Dungeon_Tilemap_409: -117695816
+      Dungeon_Tilemap_41: -35093107
+      Dungeon_Tilemap_410: -5005443
+      Dungeon_Tilemap_411: -1885107639
+      Dungeon_Tilemap_412: 242395965
+      Dungeon_Tilemap_413: 1552577363
+      Dungeon_Tilemap_414: -1549556532
+      Dungeon_Tilemap_415: -275285821
+      Dungeon_Tilemap_416: 732472645
+      Dungeon_Tilemap_417: 1781745127
+      Dungeon_Tilemap_418: 65848343
+      Dungeon_Tilemap_419: -1742999539
+      Dungeon_Tilemap_42: -2024220904
+      Dungeon_Tilemap_420: 305783006
+      Dungeon_Tilemap_421: -1001185425
+      Dungeon_Tilemap_422: 668450878
+      Dungeon_Tilemap_423: 1863786749
+      Dungeon_Tilemap_424: 434286374
+      Dungeon_Tilemap_425: 201819564
+      Dungeon_Tilemap_426: -586852949
+      Dungeon_Tilemap_427: 1383510465
+      Dungeon_Tilemap_428: -615404203
+      Dungeon_Tilemap_429: -465379761
+      Dungeon_Tilemap_43: 102277198
+      Dungeon_Tilemap_430: 49914029
+      Dungeon_Tilemap_431: 353558553
+      Dungeon_Tilemap_432: 1509732445
+      Dungeon_Tilemap_433: -94366457
+      Dungeon_Tilemap_434: -206916397
+      Dungeon_Tilemap_435: -1557197444
+      Dungeon_Tilemap_436: -643148196
+      Dungeon_Tilemap_437: 769776605
+      Dungeon_Tilemap_438: 477620010
+      Dungeon_Tilemap_439: 764160322
+      Dungeon_Tilemap_44: -308466216
+      Dungeon_Tilemap_440: -962276948
+      Dungeon_Tilemap_441: -857344225
+      Dungeon_Tilemap_442: 1947222614
+      Dungeon_Tilemap_443: 1939249760
+      Dungeon_Tilemap_444: -587360601
+      Dungeon_Tilemap_445: -1301836572
+      Dungeon_Tilemap_446: -1844535999
+      Dungeon_Tilemap_447: 1483635262
+      Dungeon_Tilemap_448: -735236673
+      Dungeon_Tilemap_449: 1953926537
+      Dungeon_Tilemap_45: -1943476146
+      Dungeon_Tilemap_450: 2039000069
+      Dungeon_Tilemap_451: -676535610
+      Dungeon_Tilemap_452: 1591871077
+      Dungeon_Tilemap_453: 890450654
+      Dungeon_Tilemap_454: -462182811
+      Dungeon_Tilemap_455: 35199004
+      Dungeon_Tilemap_456: 1870937883
+      Dungeon_Tilemap_457: -1324164860
+      Dungeon_Tilemap_458: -691011330
+      Dungeon_Tilemap_459: -1424002187
+      Dungeon_Tilemap_46: 1944920084
+      Dungeon_Tilemap_460: 469244358
+      Dungeon_Tilemap_461: 2083639385
+      Dungeon_Tilemap_462: -1848183171
+      Dungeon_Tilemap_463: 1887139968
+      Dungeon_Tilemap_464: -1282018442
+      Dungeon_Tilemap_465: -1732735998
+      Dungeon_Tilemap_466: -1358389062
+      Dungeon_Tilemap_467: 1194384702
+      Dungeon_Tilemap_468: 1105347191
+      Dungeon_Tilemap_469: -1892092838
+      Dungeon_Tilemap_47: 1321762393
+      Dungeon_Tilemap_470: -1722209849
+      Dungeon_Tilemap_471: -1450532556
+      Dungeon_Tilemap_472: 795009676
+      Dungeon_Tilemap_473: 1127902397
+      Dungeon_Tilemap_474: -1975029047
+      Dungeon_Tilemap_475: -816346512
+      Dungeon_Tilemap_476: -2073881739
+      Dungeon_Tilemap_477: 901904661
+      Dungeon_Tilemap_478: -1991518102
+      Dungeon_Tilemap_479: -1300586884
+      Dungeon_Tilemap_48: 2028422096
+      Dungeon_Tilemap_480: 496900893
+      Dungeon_Tilemap_481: 1837898442
+      Dungeon_Tilemap_482: 1349803853
+      Dungeon_Tilemap_483: -1369979964
+      Dungeon_Tilemap_484: 101750486
+      Dungeon_Tilemap_485: -318888132
+      Dungeon_Tilemap_486: 695576525
+      Dungeon_Tilemap_487: -1553970791
+      Dungeon_Tilemap_488: 526894507
+      Dungeon_Tilemap_489: 1884815902
+      Dungeon_Tilemap_49: -482375142
+      Dungeon_Tilemap_490: 1935193214
+      Dungeon_Tilemap_491: 1902485065
+      Dungeon_Tilemap_492: -958599083
+      Dungeon_Tilemap_493: -1000516706
+      Dungeon_Tilemap_494: 233398613
+      Dungeon_Tilemap_495: -361482015
+      Dungeon_Tilemap_496: 348679708
+      Dungeon_Tilemap_497: -1036377577
+      Dungeon_Tilemap_498: -1862044924
+      Dungeon_Tilemap_499: 1182761478
+      Dungeon_Tilemap_5: -1116546707
+      Dungeon_Tilemap_50: 249424784
+      Dungeon_Tilemap_500: -230641502
+      Dungeon_Tilemap_501: 2022525116
+      Dungeon_Tilemap_502: 1252444090
+      Dungeon_Tilemap_503: -202385025
+      Dungeon_Tilemap_504: -1537718300
+      Dungeon_Tilemap_505: -400878952
+      Dungeon_Tilemap_506: -789710769
+      Dungeon_Tilemap_507: -50011936
+      Dungeon_Tilemap_508: -1434589508
+      Dungeon_Tilemap_509: -1335398103
+      Dungeon_Tilemap_51: -97304588
+      Dungeon_Tilemap_52: 1960831809
+      Dungeon_Tilemap_53: 1454928806
+      Dungeon_Tilemap_54: 260455984
+      Dungeon_Tilemap_55: -1353351360
+      Dungeon_Tilemap_56: -1425794239
+      Dungeon_Tilemap_57: -414255898
+      Dungeon_Tilemap_58: 1483110905
+      Dungeon_Tilemap_59: 261363365
+      Dungeon_Tilemap_6: 1076220453
+      Dungeon_Tilemap_60: 375300550
+      Dungeon_Tilemap_61: -1053219126
+      Dungeon_Tilemap_62: -1465717982
+      Dungeon_Tilemap_63: -471642170
+      Dungeon_Tilemap_64: 126977173
+      Dungeon_Tilemap_65: -115313226
+      Dungeon_Tilemap_66: -1585716610
+      Dungeon_Tilemap_67: -772341493
+      Dungeon_Tilemap_68: 221463667
+      Dungeon_Tilemap_69: 892576345
+      Dungeon_Tilemap_7: 1148879593
+      Dungeon_Tilemap_70: 2045629238
+      Dungeon_Tilemap_71: 1094034310
+      Dungeon_Tilemap_72: 172740018
+      Dungeon_Tilemap_73: -132247635
+      Dungeon_Tilemap_74: 454083030
+      Dungeon_Tilemap_75: -1143180577
+      Dungeon_Tilemap_76: -1409516944
+      Dungeon_Tilemap_77: 64450858
+      Dungeon_Tilemap_78: -480446406
+      Dungeon_Tilemap_79: 1343249937
+      Dungeon_Tilemap_8: 1041431286
+      Dungeon_Tilemap_80: -218960760
+      Dungeon_Tilemap_81: 416858331
+      Dungeon_Tilemap_82: 40428892
+      Dungeon_Tilemap_83: -1101620946
+      Dungeon_Tilemap_84: 828479511
+      Dungeon_Tilemap_85: 1708602190
+      Dungeon_Tilemap_86: -1614923360
+      Dungeon_Tilemap_87: -1753676624
+      Dungeon_Tilemap_88: -1153909583
+      Dungeon_Tilemap_89: 12628038
+      Dungeon_Tilemap_9: -579387666
+      Dungeon_Tilemap_90: 1248143644
+      Dungeon_Tilemap_91: -160296423
+      Dungeon_Tilemap_92: 1862097639
+      Dungeon_Tilemap_93: -1379968645
+      Dungeon_Tilemap_94: 617037203
+      Dungeon_Tilemap_95: -1545447418
+      Dungeon_Tilemap_96: -2087342173
+      Dungeon_Tilemap_97: 629652715
+      Dungeon_Tilemap_98: -1192980675
+      Dungeon_Tilemap_99: -632299590
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
