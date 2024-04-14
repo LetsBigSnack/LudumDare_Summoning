@@ -455,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2820049413664961591, guid: 93bbce13a2d00174b9cbe120514ce38b, type: 3}
+      propertyPath: m_TagString
+      value: Hero
+      objectReference: {fileID: 0}
     - target: {fileID: 2941992976486059372, guid: 93bbce13a2d00174b9cbe120514ce38b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.05
@@ -809,6 +813,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
+      propertyPath: _bloodMeter
+      value: 429
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945034881953534278, guid: 9620691dfec867243934c24990f767f7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4451401891827969385, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.04

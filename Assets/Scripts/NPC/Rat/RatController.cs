@@ -19,12 +19,6 @@ public class RatController : MonoBehaviour
     [Header("Target")]
     private Transform _player;
     
-    public EnemyState _currentState = EnemyState.Fighting;
-
-    private void Awake()
-    {
-        
-    }
 
     // Start is called before the first frame update
     void Start()

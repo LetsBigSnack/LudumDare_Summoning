@@ -113,7 +113,6 @@ public class Player : MonoBehaviour
         {
             if (hitCollider.CompareTag("Rat"))
             {
-                Debug.Log("RAT");
                 Rat tempRat = hitCollider.GetComponentInParent<Rat>();
                 tempRat.StartSacrifice();
             }

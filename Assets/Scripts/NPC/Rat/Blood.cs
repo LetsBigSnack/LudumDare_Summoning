@@ -38,9 +38,7 @@ public class Blood : MonoBehaviour
 
     public IEnumerator Die()
     {
-        Debug.Log("I am going to DIE");
         yield return new WaitForSeconds(_TTD);
-        Debug.Log("I DIE");
         Destroy(gameObject);
     }
     

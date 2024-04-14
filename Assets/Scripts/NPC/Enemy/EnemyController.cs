@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 
 public enum EnemyState
 {
-    Fighting,
+    Walking,
     Attacking
 }
 
@@ -31,26 +31,25 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _invincibleCooldownTime = 3.0f;
     
     [Header("Attack")] 
-    [SerializeField] private float _attackRange = 1.3f;
+    [SerializeField] private float _attackRange = 2.0f;
     [SerializeField] private int _attackDMG = 3;
     [SerializeField] private bool _canAttack = true;
     [SerializeField] private float _attackingCooldownTime = 3.0f;
     
     [Header("NavMash_Setting")]
     private NavMeshAgent _agentAi;
-    public Vector3 pointOfInterest;
     [SerializeField]
     private float wiggleRoom = 1.25f;
     private LocationManager _locationManager;
 
     [Header("Target")] 
-    private List<GameObject> _possibleTargets;
-    private Transform _target;
+    [SerializeField] private List<GameObject> _possibleTargets;
+    [SerializeField] private Transform _target;
     private float _enemyHitRange;
 
 
     private Animator _enemyAnim;
-    public EnemyState _currentState = EnemyState.Fighting;
+    public EnemyState _currentState = EnemyState.Walking;
     
     
     
@@ -58,7 +57,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _possibleTargets = new List<GameObject>();
         _target = FindObjectOfType<Player>().transform;
         _enemyAnim = GetComponentInChildren<Animator>();
         _locationManager = FindObjectOfType<LocationManager>();
@@ -68,24 +67,30 @@ public class EnemyController : MonoBehaviour
         _agentAi.avoidancePriority = 0;
         _agentAi.speed = _enemySpeed;
         
-        pointOfInterest = _locationManager.GetRandomPointOnNavMesh(this.transform);
     }
 
     private void Update()
     {
+        UpdateTargets();
         SetAnimation();
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {
+    {  
+        
+        if (_possibleTargets.Count > 0)
+        {
+            _target = FindPriorityTarget();
+        }
+        
         switch (_currentState)
         {
-            case EnemyState.Fighting:
-                if (!IsTargetInRange())
+            case EnemyState.Walking:
+                
+                if (_target && !IsTargetInRange(_target))
                 {
                     _agentAi.SetDestination(_target.position);
-                    TravelToDestination();
                 }
                 else
                 {
@@ -93,10 +98,10 @@ public class EnemyController : MonoBehaviour
                 }
                 break;
             case EnemyState.Attacking:
-                if (IsTargetInRange())
+                if (_target && IsTargetInRange(_target))
                 {
                     _agentAi.ResetPath();
-
+                    Debug.Log("ATTACK");
                     if (_canAttack)
                     { 
                         StartCoroutine(Attack()); 
@@ -104,7 +109,8 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
-                    _currentState = EnemyState.Fighting;
+                    Debug.Log("I AM WALKING in here");
+                    _currentState = EnemyState.Walking;
                 }
                 break;
         }
@@ -121,48 +127,36 @@ public class EnemyController : MonoBehaviour
             _enemyAnim.SetFloat("moveY", y);
         }
     }
-
-    public bool IsTargetInRange()
+    
+    public bool IsTargetInRange(Transform target)
     {
-        float distance = Vector3.Distance(transform.position, _target.position);
+        float distance = Vector3.Distance(transform.position, target.position);
         return distance < _attackRange;
     }
-
-    public void TravelToDestination()
-    {
-        if (HasReachedDestination())
-        {
-            SwitchTarget();
-            _agentAi.SetDestination(pointOfInterest);
-        }
-    }
     
-    bool HasReachedDestination()
-    {
-        float distance = Vector3.Distance(transform.position, pointOfInterest);
-        return distance < wiggleRoom;
-    }
-
-    void SwitchTarget()
-    {
-        pointOfInterest = _locationManager.GetRandomPointOnNavMesh(this.transform);
-    }
-
+    
     public IEnumerator Attack()
     {
         _canAttack = false;
-        HitPlayer();
         _enemyAnim.Play("Attack");
-        Debug.Log("Attack");
+        yield return new WaitForSeconds(0.2f);
+        HitObject();
         yield return new WaitForSeconds(_attackingCooldownTime);
-        Debug.Log("Done Attacking");
         _canAttack = true;
     }
     
 
-    void HitPlayer()
+    void HitObject()
     {
-        _target.GetComponent<Player>().TakeDMG(_attackDMG);
+        Debug.Log(_target.tag);
+        if (_target.CompareTag("Player"))
+        { 
+            _target.GetComponent<Player>().TakeDMG(_attackDMG);
+        }
+        else
+        {
+            _target.GetComponent<SummonsController>().TakeDMG(_attackDMG);
+        }
     }
     
     public void TakeDMG(int value)
@@ -196,6 +190,25 @@ public class EnemyController : MonoBehaviour
     public void AddTarget(GameObject obj)
     {
         _possibleTargets.Add(obj);
+    }
+    
+    public void RemoveTarget(GameObject obj)
+    {
+        _possibleTargets.Remove(obj);
+    }
+    
+    void UpdateTargets()
+    {
+        _possibleTargets = _possibleTargets.Where(item => item != null).ToList();
+    }
+    
+    private Transform FindPriorityTarget()
+    {
+        GameObject player = _possibleTargets.FirstOrDefault(t => t.CompareTag("Player"));
+        if (player)
+            return player.transform;
+        
+        return _possibleTargets.FirstOrDefault()?.transform;
     }
     
 }

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8669971372318273884}
   - component: {fileID: 993245873780975384}
   - component: {fileID: 7933241242704808110}
+  - component: {fileID: 581521418614128627}
   m_Layer: 0
   m_Name: Skeleton_Soldier_Base
-  m_TagString: Untagged
+  m_TagString: Summon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +53,7 @@ MonoBehaviour:
   _summonMaxHealth: 100
   _isSummonDead: 0
   _summonSpeed: 2.5
+  _bloodCost: 10
   _invincibleTime: 10
   _isInvincible: 0
   _canInvincible: 1
@@ -85,6 +87,33 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!50 &581521418614128627
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389147499904859062}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4396894235553151157
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +126,7 @@ GameObject:
   - component: {fileID: 8175144592199463482}
   m_Layer: 0
   m_Name: Hurtbox
-  m_TagString: Untagged
+  m_TagString: Summon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
