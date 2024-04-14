@@ -13,25 +13,62 @@ public class ProjectileSpawner : MonoBehaviour
 
     public void Start()
     {
-        _hero = FindObjectOfType<EnemyController>().transform;
+        if(_hero == null)
+        {
+            if (FindObjectOfType<EnemyController>() != null)
+            {
+                _hero = FindObjectOfType<EnemyController>().transform;
+            }
+            else
+            {
+                _hero = null;
+            }
+        }
     }
 
     public void SpawnProjectile()
     {
         if(_hero == null)
         {
-            _hero = FindObjectOfType<EnemyController>().transform;
+            if (FindObjectOfType<EnemyController>() != null)
+            {
+                _hero = FindObjectOfType<EnemyController>().transform;
+            }
+            else
+            {
+                _hero = null;
+            }
         }
-        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        Vector3 direction = (_hero.position - transform.position).normalized; // Calculate direction to hero.
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Calculate the angle in degrees
-        newProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - degrees)); // Set rotation of projectile.
+
+        if (_hero != null)
+        {
+            GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            Vector3 direction = (_hero.position - transform.position).normalized; // Calculate direction to hero.
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Calculate the angle in degrees
+            newProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - degrees)); // Set rotation of projectile.
+        }
     }
 
     void Update()
     {
-        // Optionally update the angle continuously or when needed.
-        Vector3 direction = (_hero.position - transform.position).normalized;
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if(_hero == null)
+        {
+            if (FindObjectOfType<EnemyController>() != null)
+            {
+                _hero = FindObjectOfType<EnemyController>().transform;
+            }
+            else
+            {
+                _hero = null;
+            }
+        }
+
+        if (_hero != null)
+        {
+            // Optionally update the angle continuously or when needed.
+            Vector3 direction = (_hero.position - transform.position).normalized;
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        }
+       
     }
 }

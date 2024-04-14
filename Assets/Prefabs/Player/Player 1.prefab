@@ -750,6 +750,7 @@ MonoBehaviour:
   _currentSacrificeRadius: 0
   _sacrificeSpread: 3.79
   sacrificeCircle: {fileID: 7849250544018685192}
+  sacrificCircle: {fileID: 4302932578513072393}
   _playerLevel: 1
   _bloodMeter: 0
   _playerHealth: 100

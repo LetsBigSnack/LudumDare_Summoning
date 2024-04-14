@@ -175,6 +175,7 @@ public class EnemyController : MonoBehaviour
         if (_enemyHealth <= 0)
         {
             _isEnemyDead = true;
+            Destroy(gameObject);
         }
     }
     

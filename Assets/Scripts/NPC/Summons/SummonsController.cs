@@ -48,8 +48,18 @@ public class SummonsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        _hero = FindObjectOfType<EnemyController>().transform;
+        
+        if(_hero == null)
+        {
+            if (FindObjectOfType<EnemyController>() != null)
+            {
+                _hero = FindObjectOfType<EnemyController>().transform;
+            }
+            else
+            {
+                _hero = null;
+            }
+        }
         if (!_isMelee)
         {
             _spawner = GetComponentInChildren<ProjectileSpawner>();
@@ -60,6 +70,7 @@ public class SummonsController : MonoBehaviour
         _agentAi.updateUpAxis = false;
         _agentAi.avoidancePriority = 0;
         _agentAi.speed = _summonSpeed;
+        transform.rotation = Quaternion.identity;
 
     }
 
@@ -71,43 +82,60 @@ public class SummonsController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch (_currentState)
+        
+        if(_hero == null)
         {
-            case SummonState.Following:
+            if (FindObjectOfType<EnemyController>() != null)
+            {
+                _hero = FindObjectOfType<EnemyController>().transform;
+            }
+            else
+            {
+                _hero = null;
+            }
+        }
 
-                if (!IsTargetInRange())
-                {
-                    _agentAi.SetDestination(_hero.position);
-                }
-                else
-                {
-                    _currentState = SummonState.Attacking;
-                }
-                
-                break;
-            case SummonState.Attacking:
-                if (!IsTargetInRange())
-                {
-                    _agentAi.SetDestination(_hero.position);
-                }
-                else
-                {
-                    if (IsTargetInRange())
+        if (_hero != null)
+        {
+
+            switch (_currentState)
+            {
+                case SummonState.Following:
+
+                    if (!IsTargetInRange())
                     {
-                        _agentAi.ResetPath();
-
-                        if (_canAttack)
-                        {
-                            StartCoroutine(Attack());
-                        }
+                        _agentAi.SetDestination(_hero.position);
                     }
                     else
                     {
-                        _currentState = SummonState.Following;
+                        _currentState = SummonState.Attacking;
                     }
+
                     break;
-                }
-                break;
+                case SummonState.Attacking:
+                    if (!IsTargetInRange())
+                    {
+                        _agentAi.SetDestination(_hero.position);
+                    }
+                    else
+                    {
+                        if (IsTargetInRange())
+                        {
+                            _agentAi.ResetPath();
+
+                            if (_canAttack)
+                            {
+                                StartCoroutine(Attack());
+                            }
+                        }
+                        else
+                        {
+                            _currentState = SummonState.Following;
+                        }
+                    }
+
+                    break;
+            }
         }
     }
 

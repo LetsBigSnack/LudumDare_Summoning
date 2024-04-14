@@ -23,6 +23,7 @@ public class RatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _spawnedRats = new List<GameObject>();
         _locationManager = FindObjectOfType<LocationManager>();
     }
 
@@ -40,12 +41,15 @@ public class RatManager : MonoBehaviour
     
     private IEnumerator SpawnRat()
     {
-        _canSpawn = false;
-        Vector3 pos = _locationManager.GetRandomPointOnSpawnArea();
-        Quaternion rotation = transform.rotation;
-        GameObject tempRat = Instantiate(ratPrefab, pos, rotation);
-        _spawnedRats.Add(tempRat);
-        yield return new WaitForSeconds(_spawnCooldown);
-        _canSpawn = true;
+        if (ratPrefab != null)
+        {
+            _canSpawn = false;
+            Vector3 pos = _locationManager.GetRandomPointOnSpawnArea();
+            Quaternion rotation = transform.rotation;
+            GameObject tempRat = Instantiate(ratPrefab, pos, rotation);
+            _spawnedRats.Add(tempRat);
+            yield return new WaitForSeconds(_spawnCooldown);
+            _canSpawn = true;
+        }
     }
 }

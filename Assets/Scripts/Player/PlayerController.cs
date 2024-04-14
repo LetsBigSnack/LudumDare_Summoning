@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float playerSpeed = 10f;
     
+    
+    
     private PlayerInput _input;
     private Player _player;
     private Vector2 _playerMoveVector = Vector2.zero;

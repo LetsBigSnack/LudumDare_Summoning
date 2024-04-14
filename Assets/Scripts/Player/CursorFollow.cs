@@ -79,7 +79,7 @@ public class CursorFollow : MonoBehaviour
     {
         Transform t = transform;
         Quaternion rotation = t.rotation;
-        Instantiate(obj, t.position, rotation);
+        GameObject instance = Instantiate(obj, t.position, rotation);
     }
     
 }

@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] public float _currentSacrificeRadius = 0.0f;
     [SerializeField] private float _sacrificeSpread = 0.5f;
     [SerializeField] public GameObject sacrificeCircle;
-
+    public GameObject sacrificCircle;
+    
     [Header("Player Stats")] 
     [SerializeField] private int _playerLevel = 1;
     [SerializeField] private int _bloodMeter;
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
         sacrificeCircle.SetActive(false);
         _currentSacrificeRadius = 0;
         sacrificeCircle.transform.localScale = new Vector3(_currentSacrificeRadius, _currentSacrificeRadius, 0);
+        sacrificCircle.SetActive(true);
     }
 
 
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour
     void GrowSacrificeCricle()
     {
         sacrificeCircle.SetActive(true);
+        sacrificCircle.SetActive(false);
         _currentSacrificeRadius += _sacrificeSpread * Time.fixedDeltaTime;
         Transform parent = sacrificeCircle.transform.parent;
         sacrificeCircle.transform.SetParent(null);
