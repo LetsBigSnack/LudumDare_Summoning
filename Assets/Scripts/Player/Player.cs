@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [Header("Player Stats")] 
     [SerializeField] private int _playerLevel = 1;
     [SerializeField] private int _bloodMeter;
+    [SerializeField] private int _bloodMeterMax = 100;
     [SerializeField] private int _playerHealth = 100;
     [SerializeField] private int _playerMaxHealth = 100;
     [SerializeField] private bool _isPlayerDead;
@@ -156,4 +157,21 @@ public class Player : MonoBehaviour
     {
         return _playerHealth;
     }
+
+    public int GetMaxHealth()
+    {
+        return _playerMaxHealth;
+    }
+
+    public int GetBlood()
+    {
+        return _bloodMeter;
+    }
+
+    public int GetMaxBlood()
+    {
+        return _bloodMeterMax;
+    }
+
+
 }
