@@ -173,5 +173,25 @@ public class Player : MonoBehaviour
         return _bloodMeterMax;
     }
 
+    public void SetHealth(int value)
+    {
+        _playerMaxHealth += value;
+        _playerHealth = _playerMaxHealth;
+    }
+
+    public void SetBlood(int value)
+    {
+        _bloodMeterMax += value;
+    }
+
+    public void SetMaxSacrificeRadius(float value)
+    {
+        _maxSacrificeRadius += value;
+    }
+
+    public void SetSpreadSpeed(float value)
+    {
+        _sacrificeSpread += value;
+    }
 
 }

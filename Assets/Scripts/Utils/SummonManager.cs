@@ -118,6 +118,10 @@ public class SummonManager : MonoBehaviour
         selectedSummon = Summons[_summonIndex];
     }
     
+    public void SetMaxSummons(int value)
+    {
+        maxSummons += value;
+    }
     
     
 }

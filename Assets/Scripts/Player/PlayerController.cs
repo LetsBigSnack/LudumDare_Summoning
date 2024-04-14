@@ -123,4 +123,8 @@ public class PlayerController : MonoBehaviour
         playerSpeed = 10f;
     }
     
+    public void SetSpeed(int value)
+    {
+        playerSpeed += value;
+    }
 }
