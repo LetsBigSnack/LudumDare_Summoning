@@ -8,9 +8,12 @@ public class CursorFollow : MonoBehaviour
     private Vector2 cursorPosition;
     private PlayerInput playerControls;
     private Camera mainCamera;
-
+    private Player _player;
+    
+    
     private void Awake()
     {
+        _player = FindObjectOfType<Player>();
         playerControls = new PlayerInput();
         mainCamera = Camera.main;
         
@@ -77,9 +80,13 @@ public class CursorFollow : MonoBehaviour
 
     public void SpawnObject(GameObject obj)
     {
-        Transform t = transform;
-        Quaternion rotation = t.rotation;
-        GameObject instance = Instantiate(obj, t.position, rotation);
+        SummonsController tempSummonController = obj.GetComponent<SummonsController>();
+        
+        if(_player.SpendBlood(tempSummonController.GetBloodCost())){
+            Transform t = transform;
+            Quaternion rotation = t.rotation;
+            GameObject instance = Instantiate(obj, t.position, rotation);
+        }
     }
     
 }

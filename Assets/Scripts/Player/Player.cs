@@ -93,6 +93,17 @@ public class Player : MonoBehaviour
     {
         _bloodMeter += bloodValue;
     }
+
+    public bool SpendBlood(int value)
+    {
+        if (_bloodMeter - value < 0)
+        {
+            return false;
+        }
+
+        _bloodMeter -= value;
+        return true;
+    }
     
     void Sacrifice()
     {

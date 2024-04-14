@@ -18,6 +18,7 @@ public class SummonsController : MonoBehaviour
     [SerializeField] private int _summonMaxHealth = 100;
     [SerializeField] private bool _isSummonDead;
     [SerializeField] private float _summonSpeed;
+    [SerializeField] private int _bloodCost = 10;
 
     [Header("Invincible")]
     [SerializeField] private float _invincibleTime = 10f;
@@ -211,6 +212,11 @@ public class SummonsController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         _spawner.SpawnProjectile();
+    }
+
+    public int GetBloodCost()
+    {
+        return _bloodCost;
     }
 
 }
