@@ -43,19 +43,23 @@ public class EnemyController : MonoBehaviour
     private float wiggleRoom = 1.25f;
     private LocationManager _locationManager;
 
-    [Header("Target")]
-    private Transform _player;
+    [Header("Target")] 
+    private List<GameObject> _possibleTargets;
+    private Transform _target;
     private float _enemyHitRange;
 
 
     private Animator _enemyAnim;
     public EnemyState _currentState = EnemyState.Fighting;
     
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         
-        _player = FindObjectOfType<Player>().transform;
+        _target = FindObjectOfType<Player>().transform;
         _enemyAnim = GetComponentInChildren<Animator>();
         _locationManager = FindObjectOfType<LocationManager>();
         _agentAi = GetComponent<NavMeshAgent>();
@@ -80,7 +84,7 @@ public class EnemyController : MonoBehaviour
             case EnemyState.Fighting:
                 if (!IsTargetInRange())
                 {
-                    _agentAi.SetDestination(_player.position);
+                    _agentAi.SetDestination(_target.position);
                     TravelToDestination();
                 }
                 else
@@ -120,7 +124,7 @@ public class EnemyController : MonoBehaviour
 
     public bool IsTargetInRange()
     {
-        float distance = Vector3.Distance(transform.position, _player.position);
+        float distance = Vector3.Distance(transform.position, _target.position);
         return distance < _attackRange;
     }
 
@@ -158,7 +162,7 @@ public class EnemyController : MonoBehaviour
 
     void HitPlayer()
     {
-        _player.GetComponent<Player>().TakeDMG(_attackDMG);
+        _target.GetComponent<Player>().TakeDMG(_attackDMG);
     }
     
     public void TakeDMG(int value)
@@ -187,6 +191,11 @@ public class EnemyController : MonoBehaviour
         _isInvincible = false;
         yield return new WaitForSeconds(_invincibleCooldownTime);
         _canInvincible = true;
+    }
+
+    public void AddTarget(GameObject obj)
+    {
+        _possibleTargets.Add(obj);
     }
     
 }
