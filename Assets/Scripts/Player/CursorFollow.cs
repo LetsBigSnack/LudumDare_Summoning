@@ -51,7 +51,7 @@ public class CursorFollow : MonoBehaviour
         }
         else
         {
-            Vector3 deltaMove = new Vector3(cursorPosition.x, cursorPosition.y, 0) * Time.deltaTime * 5;
+            Vector3 deltaMove = new Vector3(cursorPosition.x, cursorPosition.y, 0) * Time.deltaTime * 20;
             targetPosition = transform.position + deltaMove;
         }
 
