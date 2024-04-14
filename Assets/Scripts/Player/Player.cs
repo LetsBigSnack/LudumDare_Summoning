@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-
+    private DeathUiManager _deathUiManager;
     public float rotationSpeed = 10;
     
     [Header("Sacrifice")] 
@@ -39,12 +39,15 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _deathUiManager = FindObjectOfType<DeathUiManager>(true);
+        _deathUiManager.level = _playerLevel;
         GetNewLevelThreshold();
         isMoving = false;
     }
 
     void GetNewLevelThreshold()
     {
+        _deathUiManager.level = _playerLevel;
         _xpToNextLevel = _playerLevel * _playerLevel * 50;
     }
     
@@ -104,6 +107,7 @@ public class Player : MonoBehaviour
     {
         _bloodMeter += bloodValue;
         _currentXP += bloodValue * 10;
+        _deathUiManager.ratsSacrificed++;
         if (_currentXP >= _xpToNextLevel)
         {
             _currentXP = 0;

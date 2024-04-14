@@ -9,10 +9,11 @@ public class CursorFollow : MonoBehaviour
     private PlayerInput playerControls;
     private Camera mainCamera;
     private Player _player;
-    
+    private DeathUiManager _deathUiManager;
     
     private void Awake()
     {
+        _deathUiManager = FindObjectOfType<DeathUiManager>(true);
         _player = FindObjectOfType<Player>();
         playerControls = new PlayerInput();
         mainCamera = Camera.main;
@@ -81,7 +82,7 @@ public class CursorFollow : MonoBehaviour
     public bool SpawnObject(GameObject obj)
     {
         SummonsController tempSummonController = obj.GetComponent<SummonsController>();
-        
+        _deathUiManager.skeletonsSummoned++;
         if(_player.SpendBlood(tempSummonController.GetBloodCost())){
             Transform t = transform;
             Quaternion rotation = t.rotation;
