@@ -38,6 +38,9 @@ public class Projectile : MonoBehaviour
 
     void HitHero()
     {
-        _hero.GetComponent<EnemyController>().TakeDMG(damage);
+        if (_hero != null)
+        { 
+            _hero.GetComponent<EnemyController>().TakeDMG(damage);
+        }
     }
 }

@@ -83,6 +83,10 @@ public class EnemyController : MonoBehaviour
         {
             _target = FindPriorityTarget();
         }
+        else
+        {
+            _currentState = EnemyState.Walking;
+        }
         
         switch (_currentState)
         {
@@ -109,7 +113,7 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("I AM WALKING in here");
+                    _agentAi.SetDestination(_target.position);
                     _currentState = EnemyState.Walking;
                 }
                 break;

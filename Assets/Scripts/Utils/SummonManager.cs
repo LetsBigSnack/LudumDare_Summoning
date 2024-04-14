@@ -15,13 +15,25 @@ public class SummonManager : MonoBehaviour
     public int _summonIndex = 0;
     public List<GameObject> Summons;
     public GameObject selectedSummon;
+    
+    [SerializeField]
+    private List<SummonsController> _spawnedSummons;
 
-
+    [SerializeField]
+    private int maxSummons = 30;
+    
+    
     public void Awake()
     { 
         _input = new PlayerInput();
+        _spawnedSummons = new List<SummonsController>();
         _cursorFollow = FindObjectOfType<CursorFollow>();
         selectedSummon = Summons[0];
+    }
+
+    public void LateUpdate()
+    {
+        _spawnedSummons = FindObjectsByType<SummonsController>(FindObjectsSortMode.None).ToList();
     }
 
     private void OnEnable()
@@ -75,7 +87,10 @@ public class SummonManager : MonoBehaviour
 
     void SpawnSummon(InputAction.CallbackContext value)
     {
-        _cursorFollow.SpawnObject(selectedSummon);
+        if (_spawnedSummons.Count < maxSummons)
+        { 
+            _cursorFollow.SpawnObject(selectedSummon);
+        }
     }
     
     
