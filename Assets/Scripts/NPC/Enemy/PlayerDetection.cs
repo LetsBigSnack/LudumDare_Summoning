@@ -18,17 +18,19 @@ public class PlayerDetection : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        Debug.Log(other.tag);
+        if (other.CompareTag("Player") || other.CompareTag("Summon"))
         {
-            _enemyController._currentState = EnemyState.Fighting;
+            Debug.Log(other);
+            _enemyController.AddTarget(other.transform.parent.gameObject);
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Summon"))
         {
-            //_enemyController._currentState = EnemyState.Patrolling;
+            _enemyController.RemoveTarget(other.transform.parent.gameObject);
         }
     }
 }

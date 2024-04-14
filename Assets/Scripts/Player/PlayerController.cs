@@ -111,7 +111,6 @@ public class PlayerController : MonoBehaviour
 
     void OnSacrificePlayerPerfomred(InputAction.CallbackContext value)
     {
-        Debug.Log("PRESS");
         _player.SetSacrifice(true);
         _playerAnim.SetBool("isCharging", true);
         playerSpeed = 3f;
@@ -119,7 +118,6 @@ public class PlayerController : MonoBehaviour
 
     void OnSacrificePlayerCancelled(InputAction.CallbackContext value)
     {
-        Debug.Log("RELEASE");
         _player.SetSacrifice(false);
         _playerAnim.SetBool("isCharging", false);
         playerSpeed = 10f;

@@ -78,7 +78,7 @@ public class CursorFollow : MonoBehaviour
     }
 
 
-    public void SpawnObject(GameObject obj)
+    public bool SpawnObject(GameObject obj)
     {
         SummonsController tempSummonController = obj.GetComponent<SummonsController>();
         
@@ -86,7 +86,9 @@ public class CursorFollow : MonoBehaviour
             Transform t = transform;
             Quaternion rotation = t.rotation;
             GameObject instance = Instantiate(obj, t.position, rotation);
+            return true;
         }
+        return false;
     }
     
 }

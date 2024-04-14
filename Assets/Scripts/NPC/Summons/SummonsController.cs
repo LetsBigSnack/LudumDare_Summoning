@@ -169,9 +169,7 @@ public class SummonsController : MonoBehaviour
             StartCoroutine(ShootArrow());
         }
         _summonAnim.Play("Attack");
-        Debug.Log("Attack");
         yield return new WaitForSeconds(_attackingCooldownTime);
-        Debug.Log("Done Attacking");
         _canAttack = true;
     }
 
@@ -195,6 +193,7 @@ public class SummonsController : MonoBehaviour
         if (_summonHealth <= 0)
         {
             _isSummonDead = true;
+            Destroy(gameObject);
         }
     }
 

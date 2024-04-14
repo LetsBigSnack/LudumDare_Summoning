@@ -237,7 +237,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4.5
 --- !u!1 &2820049413664961591
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,12 +295,13 @@ MonoBehaviour:
   _isInvincible: 0
   _canInvincible: 1
   _invincibleCooldownTime: 3
-  _attackRange: 1.5
-  _attackDMG: 3
+  _attackRange: 2
+  _attackDMG: 1000
   _canAttack: 1
   _attackingCooldownTime: 3
-  pointOfInterest: {x: 0, y: 0, z: 0}
-  wiggleRoom: 1.25
+  wiggleRoom: 2
+  _possibleTargets: []
+  _target: {fileID: 0}
   _currentState: 0
 --- !u!195 &1432826606058020105
 NavMeshAgent:
