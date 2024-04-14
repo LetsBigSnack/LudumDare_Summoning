@@ -8,8 +8,9 @@ public class Player : MonoBehaviour
     [Header("Sacrifice")] 
     [SerializeField] private bool _isSacrificing = false;
     [SerializeField] private float _maxSacrificeRadius = 3.0f;
-    [SerializeField] private float _currentSacrificeRadius = 0.0f;
+    [SerializeField] public float _currentSacrificeRadius = 0.0f;
     [SerializeField] private float _sacrificeSpread = 0.5f;
+    [SerializeField] public GameObject sacrificeCircle;
 
     [Header("Player Stats")] 
     [SerializeField] private int _playerLevel = 1;
@@ -53,17 +54,24 @@ public class Player : MonoBehaviour
     
     public void ResetSacrificeCircle()
     {
+        sacrificeCircle.SetActive(false);
         _currentSacrificeRadius = 0;
+        sacrificeCircle.transform.localScale = new Vector3(_currentSacrificeRadius, _currentSacrificeRadius, 0);
     }
 
 
 
     void GrowSacrificeCricle()
     {
+        sacrificeCircle.SetActive(true);
         _currentSacrificeRadius += _sacrificeSpread * Time.fixedDeltaTime;
-
+        Transform parent = sacrificeCircle.transform.parent;
+        sacrificeCircle.transform.SetParent(null);
+        sacrificeCircle.transform.localScale = new Vector3(_currentSacrificeRadius, _currentSacrificeRadius, 0);
+        sacrificeCircle.transform.SetParent(parent);
         if (_currentSacrificeRadius > _maxSacrificeRadius)
         {
+            
             _currentSacrificeRadius = _maxSacrificeRadius;
         }
     }

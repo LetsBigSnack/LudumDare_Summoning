@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public int damage;
     public int speed;
     public float decay;
+    public float degrees;
 
     [Header("Target")]
     private Transform _hero;
@@ -24,7 +25,7 @@ public class Projectile : MonoBehaviour
     }
 
     private void Shoot() { 
-        _rb.AddForce((_hero.position - transform.position)*speed);
+        _rb.AddForce((_hero.position - transform.position).normalized*speed, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

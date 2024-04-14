@@ -28,7 +28,7 @@ public class SummonsController : MonoBehaviour
     [Header("Attack")]
     [SerializeField] private float _attackRange = 1.3f;
     [SerializeField] private int _attackDMG = 3;
-    [SerializeField] private bool _canAttack = true;
+    [SerializeField] public bool _canAttack = true;
     [SerializeField] private float _attackingCooldownTime = 3.0f;
 
     [Header("NavMash_Setting")]
@@ -41,6 +41,7 @@ public class SummonsController : MonoBehaviour
     private float _summonHitRange;
 
     public bool _isMelee;
+    private ProjectileSpawner _spawner;
     private Animator _summonAnim;
     public SummonState _currentState = SummonState.Following;
 
@@ -49,6 +50,10 @@ public class SummonsController : MonoBehaviour
     {
 
         _hero = FindObjectOfType<EnemyController>().transform;
+        if (!_isMelee)
+        {
+            _spawner = GetComponentInChildren<ProjectileSpawner>();
+        }
         _summonAnim = GetComponentInChildren<Animator>();
         _agentAi = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _agentAi.updateRotation = false;
@@ -130,6 +135,9 @@ public class SummonsController : MonoBehaviour
         if (_isMelee)
         {
             HitHero();
+        } else
+        {
+            StartCoroutine(ShootArrow());
         }
         _summonAnim.Play("Attack");
         Debug.Log("Attack");
@@ -169,6 +177,12 @@ public class SummonsController : MonoBehaviour
         _isInvincible = false;
         yield return new WaitForSeconds(_invincibleCooldownTime);
         _canInvincible = true;
+    }
+
+    private IEnumerator ShootArrow()
+    {
+        yield return new WaitForSeconds(0.3f);
+        _spawner.SpawnProjectile();
     }
 
 }
