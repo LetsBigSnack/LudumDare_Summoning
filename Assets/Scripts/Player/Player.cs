@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+
+    public float rotationSpeed = 10;
+    
     [Header("Sacrifice")] 
     [SerializeField] private bool _isSacrificing = false;
     [SerializeField] private float _maxSacrificeRadius = 3.0f;
@@ -68,6 +71,7 @@ public class Player : MonoBehaviour
         Transform parent = sacrificeCircle.transform.parent;
         sacrificeCircle.transform.SetParent(null);
         sacrificeCircle.transform.localScale = new Vector3(_currentSacrificeRadius, _currentSacrificeRadius, 0);
+        sacrificeCircle.transform.Rotate(0,0,rotationSpeed*_currentSacrificeRadius*Time.deltaTime);
         sacrificeCircle.transform.SetParent(parent);
         if (_currentSacrificeRadius > _maxSacrificeRadius)
         {
