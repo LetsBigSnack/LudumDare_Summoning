@@ -15,7 +15,7 @@ public class PowerDown : MonoBehaviour
     public void Start()
     {
 
-        _pwManager = FindObjectOfType<PowerUpManager>();
+        _pwManager = FindObjectOfType<PowerUpManager>(true);
 
         if (_pwManager != null)
         {

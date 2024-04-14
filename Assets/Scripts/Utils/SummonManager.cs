@@ -21,7 +21,8 @@ public class SummonManager : MonoBehaviour
 
     [SerializeField]
     private int maxSummons = 30;
-    
+
+    private PauseManager _pauseManager;
     
     public void Awake()
     { 
@@ -29,6 +30,7 @@ public class SummonManager : MonoBehaviour
         _spawnedSummons = new List<SummonsController>();
         _cursorFollow = FindObjectOfType<CursorFollow>();
         selectedSummon = Summons[0];
+        _pauseManager = FindObjectOfType<PauseManager>();
     }
 
     public void LateUpdate()
@@ -87,7 +89,7 @@ public class SummonManager : MonoBehaviour
 
     void SpawnSummon(InputAction.CallbackContext value)
     {
-        if (_spawnedSummons.Count < maxSummons)
+        if (_spawnedSummons.Count < maxSummons && !_pauseManager.isPaused)
         { 
             _cursorFollow.SpawnObject(selectedSummon);
         }

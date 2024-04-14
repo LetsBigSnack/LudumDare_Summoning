@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using TMPro;
 
 public class PowerUpCard : MonoBehaviour
 {
+
+    private Player _player;
     [Header("PowerUpMenu")]
     public GameObject powerUpMenu;
 
@@ -25,12 +28,17 @@ public class PowerUpCard : MonoBehaviour
 
     // Start is called before the first frame update
 
+    private void Awake()
+    {
+        _player = FindObjectOfType<Player>();
+    }
+
     private void OnDisable()
     {
         powerUp = null;
         powerDown = null;
     }
-    void Start()
+    void Update()
     {
         posTitel.text = powerUp.titel;
         posDescription.text = powerUp.description;
@@ -38,6 +46,8 @@ public class PowerUpCard : MonoBehaviour
         negTitel.text = powerDown.titel;
         negDescription.text = powerDown.description;
     }
+    
+    
 
     // Update is called once per frame
    
@@ -45,6 +55,7 @@ public class PowerUpCard : MonoBehaviour
     {
         GameObject powerUpPrefab = Instantiate(powerUp.gameObject);
         GameObject powerDownPrefab = Instantiate(powerDown.gameObject);
+        _player.LeveledUP();
         closeMenu();
     }
 

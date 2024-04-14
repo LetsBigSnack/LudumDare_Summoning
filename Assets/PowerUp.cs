@@ -19,6 +19,7 @@ public class PowerUp : MonoBehaviour
 
         _player = FindObjectOfType<Player>();
         _playerCon = FindObjectOfType<PlayerController>();
+        _sumMan = FindObjectOfType<SummonManager>();
 
         if (_player != null && _playerCon != null) { 
             switch (valueToChange)

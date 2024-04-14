@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PowerUpManager : MonoBehaviour
 {
@@ -26,16 +28,19 @@ public class PowerUpManager : MonoBehaviour
         //call this function when opening up the menu
         passPowerUp();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void OnEnable()
     {
-        
+        passPowerUp();
     }
 
     public void applySet(EnemyController hero)
     {
-        //apply the changes to the new hero
+        Debug.Log("APPLY SET");
+        hero.SetHealth(heroHealth);
+        hero.SetSpeed(heroSpeed);
+        hero.SetDMG(heroDamage);
+        hero.SetAttackSpeed(heroAttackSpeed);
     }
 
     public int randomNumber(int value)

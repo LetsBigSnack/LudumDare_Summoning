@@ -17,6 +17,7 @@ public enum EnemyState
 public class EnemyController : MonoBehaviour
 {
 
+    private PowerUpManager _powerUpManager;
         
     [Header("Enemy Stats")] 
     [SerializeField] private int _enemyHealth = 100;
@@ -25,10 +26,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _enemySpeed;
     
     [Header("Invincible")] 
-    [SerializeField] private float _invincibleTime = 10f;
+    [SerializeField] private float _invincibleTime = 0.5f;
     [SerializeField] private bool _isInvincible = false;
     [SerializeField] private bool _canInvincible = true;
-    [SerializeField] private float _invincibleCooldownTime = 3.0f;
+    [SerializeField] private float _invincibleCooldownTime = 1.0f;
     
     [Header("Attack")] 
     [SerializeField] private float _attackRange = 2.0f;
@@ -50,13 +51,37 @@ public class EnemyController : MonoBehaviour
 
     private Animator _enemyAnim;
     public EnemyState _currentState = EnemyState.Walking;
+
+
+
+    public void SetHealth(int value)
+    {
+        this._enemyHealth += value;
+        this._enemyMaxHealth += value;
+    }
     
+    public void SetSpeed(float value)
+    {
+        this._enemySpeed += value;
+    }
+    
+    public void SetDMG(int value)
+    {
+        this._attackDMG += value;
+    }
+    
+    public void SetAttackSpeed(float value)
+    {
+        this._attackingCooldownTime -= value;
+    }
     
     
     
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        _powerUpManager = FindObjectOfType<PowerUpManager>(true);
+        _powerUpManager.applySet(this);
         _possibleTargets = new List<GameObject>();
         _target = FindObjectOfType<Player>().transform;
         _enemyAnim = GetComponentInChildren<Animator>();
@@ -66,7 +91,6 @@ public class EnemyController : MonoBehaviour
         _agentAi.updateUpAxis = false;
         _agentAi.avoidancePriority = 0;
         _agentAi.speed = _enemySpeed;
-        
     }
 
     private void Update()

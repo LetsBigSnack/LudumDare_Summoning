@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     
     [Header("Player Stats")] 
     [SerializeField] private int _playerLevel = 1;
+
+    [SerializeField] private int _currentXP = 0;
+    [SerializeField] private int _xpToNextLevel = 100;
+    public bool hasLeveledUp = false;
     [SerializeField] private int _bloodMeter;
     [SerializeField] private int _bloodMeterMax = 100;
     [SerializeField] private int _playerHealth = 100;
@@ -35,9 +39,15 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetNewLevelThreshold();
         isMoving = false;
     }
 
+    void GetNewLevelThreshold()
+    {
+        _xpToNextLevel = _playerLevel * _playerLevel * 50;
+    }
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -93,6 +103,14 @@ public class Player : MonoBehaviour
     public void AddBlood(int bloodValue)
     {
         _bloodMeter += bloodValue;
+        _currentXP += bloodValue * 10;
+        if (_currentXP >= _xpToNextLevel)
+        {
+            _currentXP = 0;
+            _playerLevel++;
+            hasLeveledUp = true;
+            GetNewLevelThreshold();
+        }
     }
 
     public bool SpendBlood(int value)
@@ -194,4 +212,8 @@ public class Player : MonoBehaviour
         _sacrificeSpread += value;
     }
 
+    public void LeveledUP()
+    {
+        hasLeveledUp = false;
+    }
 }

@@ -72,9 +72,16 @@ public class PauseManager : MonoBehaviour
     public void ResumeGame()
     {
         _cursorFollow.gameObject.SetActive(true);
-        _summonManager.gameObject.SetActive(true);
         Time.timeScale = 1;
         isPaused = false;
+        canResume = true;
     }
-    
+
+    public void HardPauseGame()
+    {
+        _cursorFollow.gameObject.SetActive(false);
+        Time.timeScale = 0;
+        isPaused = true;
+        canResume = false;
+    }
 }
