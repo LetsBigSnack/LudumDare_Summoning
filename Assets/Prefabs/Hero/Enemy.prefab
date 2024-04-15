@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a199e38c856c5b34cb3e2b91919b3bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -304,8 +304,8 @@ MonoBehaviour:
   wiggleRoom: 2
   _possibleTargets: []
   _target: {fileID: 0}
-  baseShader: {fileID: 0}
-  dmgShader: {fileID: 0}
+  baseShader: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  dmgShader: {fileID: 2100000, guid: 0b69f08e887562447b96624dd57d595e, type: 2}
   isDamaged: 0
   _currentState: 0
 --- !u!195 &1432826606058020105
@@ -342,7 +342,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bfa69ad3a984a8e4fbb49cddb66db5f5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 0.3
   Loop: 0
   Mute: 0
@@ -500,7 +500,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1030525857, guid: 6187f5a17e4c7e646854064e0ae8a08e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

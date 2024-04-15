@@ -690,10 +690,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2494210627881965791, guid: 223f3a8814f2f2f43a27e12040dbb98f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7063713966974331228, guid: 223f3a8814f2f2f43a27e12040dbb98f, type: 3}
       propertyPath: m_Name
       value: Skeleton_Soldier
