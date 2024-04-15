@@ -47,15 +47,19 @@ public class PauseManager : MonoBehaviour
 
     public void TogglePause(InputAction.CallbackContext value)
     {
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAA");
         if (isPaused)
         {
+            Debug.Log("CCCCCCCCCCC");
             if (canResume)
             {
+                Debug.Log("DDDDDDDDDDDDDDDDD");
                 ResumeGame();
             }
         }
         else
         {
+            Debug.Log("BBBBBBBBBBBBBBB");
             PauseGame();
         }
         
@@ -68,11 +72,13 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         canResume = true;
+        Debug.Log("i am paused");
     }
 
     public void ResumeGame()
     {
         _cursorFollow.gameObject.SetActive(true);
+        _summonManager.gameObject.SetActive(true);
         Time.timeScale = 1;
         isPaused = false;
         canResume = true;
@@ -81,6 +87,7 @@ public class PauseManager : MonoBehaviour
     public void HardPauseGame()
     {
         _cursorFollow.gameObject.SetActive(false);
+        _summonManager.gameObject.SetActive(false);
         Time.timeScale = 0;
         isPaused = true;
         canResume = false;

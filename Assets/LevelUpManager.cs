@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelUpManager : MonoBehaviour
 {
+
+    private bool levelManagerDisplayed;
     public GameObject _levelUpManager;
 
     private PauseManager _pauseManager;
@@ -24,11 +26,16 @@ public class LevelUpManager : MonoBehaviour
         {
             _levelUpManager.SetActive(true);
             _pauseManager.HardPauseGame();
+            levelManagerDisplayed = true;
         }
         else
         {
-            _levelUpManager.SetActive(false);
-            _pauseManager.ResumeGame();
+            if (levelManagerDisplayed)
+            {
+                _levelUpManager.SetActive(false);
+                _pauseManager.ResumeGame();
+                levelManagerDisplayed = false;
+            }
         }
     }
 }

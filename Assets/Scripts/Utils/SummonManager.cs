@@ -50,15 +50,11 @@ public class SummonManager : MonoBehaviour
     private void OnEnable()
     {
         _input.Enable();
-        
         // ToggleSummon
         _input.Player.ToggleSummon.performed += SwitchSummon;
-        
         _input.Player.Summon.performed += SpawnSummon;
-
         _input.Player.ToggleUp.performed += ToggleSummonUp;
         _input.Player.ToggleDown.performed += ToggleSummonDown;
-
     }
 
     private void OnDisable()
@@ -123,6 +119,7 @@ public class SummonManager : MonoBehaviour
 
     void SpawnSummon(InputAction.CallbackContext value)
     {
+        Debug.Log("------------------SUMMON");
         if (_spawnedSummons.Count < maxSummons && !_pauseManager.isPaused)
         { 
             _cursorFollow.SpawnObject(selectedSummon);
