@@ -52,19 +52,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb493808ec76a5b46a77daa147172287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _summonHealth: 100
-  _summonMaxHealth: 100
+  _summonHealth: 20
+  _summonMaxHealth: 20
   _isSummonDead: 0
-  _summonSpeed: 2.5
-  _bloodCost: 10
-  _invincibleTime: 10
+  _summonSpeed: 3
+  _bloodCost: 5
+  _invincibleTime: 0.5
   _isInvincible: 0
   _canInvincible: 1
   _invincibleCooldownTime: 3
   _attackRange: 2
   _attackDMG: 3
   _canAttack: 1
-  _attackingCooldownTime: 3
+  _attackingCooldownTime: 2
   attackSound:
   - {fileID: 788271954244172733}
   - {fileID: 541256869584156498}
