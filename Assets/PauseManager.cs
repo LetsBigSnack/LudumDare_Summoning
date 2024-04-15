@@ -7,7 +7,7 @@ public class PauseManager : MonoBehaviour
 {
 
     public bool isPaused = false;
-    private bool canResume = true;
+    public bool canResume = true;
     private PlayerInput _input;
     private CursorFollow _cursorFollow;
     private SummonManager _summonManager;
@@ -67,6 +67,7 @@ public class PauseManager : MonoBehaviour
         _summonManager.gameObject.SetActive(false);
         Time.timeScale = 0;
         isPaused = true;
+        canResume = true;
     }
 
     public void ResumeGame()

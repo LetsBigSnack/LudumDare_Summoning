@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class SummonHolder : MonoBehaviour
 {
     public Image image;
-    private TextMeshProUGUI _price;
+    public TextMeshProUGUI _price;
     private Player _player;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _price = GetComponentInChildren<TextMeshProUGUI>();
         _player = FindObjectOfType<Player>(true);

@@ -35,7 +35,10 @@ public class SummonManager : MonoBehaviour
         selectedSummon = Summons[0];
         _pauseManager = FindObjectOfType<PauseManager>();
         _summonHolder = FindObjectOfType<DisplaySummonManager>(true);
-        
+    }
+
+    private void Start()
+    {
         DisplaySummon();
     }
 
