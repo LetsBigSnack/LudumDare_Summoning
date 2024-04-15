@@ -16,10 +16,13 @@ public class Blood : MonoBehaviour
     [SerializeField]
     private float _speed = 0.25f;
 
+    public AudioSource splatter;
+
 
     public void Start()
     {
         _player = FindObjectOfType<Player>().transform;
+        PlaySound();
         StartCoroutine(Die());
     }
 
@@ -29,6 +32,11 @@ public class Blood : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, _player.position, _speed * Time.fixedDeltaTime);
         }
+    }
+
+    public void PlaySound()
+    {
+        splatter.Play();
     }
 
     public int GetBlood()

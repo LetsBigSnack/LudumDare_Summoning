@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 _playerMoveVector = Vector2.zero;
     private Rigidbody2D _playerRB;
     private Animator _playerAnim;
+
+    public AudioSource chanting;
+    private bool isChanting;
     
     
     // Start is called before the first frame update
@@ -112,6 +115,12 @@ public class PlayerController : MonoBehaviour
 
     void OnSacrificePlayerPerfomred(InputAction.CallbackContext value)
     {
+        if (!isChanting)
+        {
+            chanting.Play();
+            isChanting = true;
+        }
+
         _player.SetSacrifice(true);
         _playerAnim.SetBool("isCharging", true);
         savedPlayerSpeed = playerSpeed;
@@ -120,6 +129,11 @@ public class PlayerController : MonoBehaviour
 
     void OnSacrificePlayerCancelled(InputAction.CallbackContext value)
     {
+        if (isChanting)
+        {
+            chanting.Pause();
+            isChanting = false;
+        }
         _player.SetSacrifice(false);
         _playerAnim.SetBool("isCharging", false);
         playerSpeed = savedPlayerSpeed;

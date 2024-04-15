@@ -32,6 +32,7 @@ public class SummonsController : MonoBehaviour
     [SerializeField] private int _attackDMG = 3;
     [SerializeField] public bool _canAttack = true;
     [SerializeField] private float _attackingCooldownTime = 3.0f;
+    public AudioSource[] attackSound;
 
     [Header("NavMash_Setting")]
     private UnityEngine.AI.NavMeshAgent _agentAi;
@@ -192,6 +193,7 @@ public class SummonsController : MonoBehaviour
             StartCoroutine(ShootArrow());
         }
         _summonAnim.Play("Attack");
+        attackSound[Random.Range(0, attackSound.Length - 1)].Play();
         yield return new WaitForSeconds(_attackingCooldownTime);
         _canAttack = true;
     }
