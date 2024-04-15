@@ -25,6 +25,9 @@ public class PowerUpManager : MonoBehaviour
     public float heroSpeed;
     public int heroDamage;
     public float heroAttackSpeed;
+
+
+    
     
     // Start is called before the first frame update
     void Awake()
