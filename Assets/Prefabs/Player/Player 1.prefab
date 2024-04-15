@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3427309919489411348}
   - component: {fileID: 4120219190211848839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 1875090883982602790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2679214, y: -1.0154275, z: 0}
+  m_LocalPosition: {x: -1.2679214, y: -1.0154275, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 5395642067374812958}
   m_Layer: 0
   m_Name: PlayerPickUpRadius
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5665104818902758039}
   - component: {fileID: 67504719622027224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CursorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.6415094, g: 0.09380562, b: 0.44751933, a: 1}
   m_FlipX: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   _currentXP: 0
   _xpToNextLevel: 100
   hasLeveledUp: 0
-  _bloodMeter: 0
+  _bloodMeter: 337
   _bloodMeterMax: 100
   _playerHealth: 100
   _playerMaxHealth: 100
@@ -765,7 +765,7 @@ MonoBehaviour:
   _invincibleTime: 0.5
   _isInvincible: 0
   _canInvincible: 1
-  _invincibleCooldownTime: 4
+  _invincibleCooldownTime: 2
   isMoving: 0
 --- !u!114 &4917058146809753623
 MonoBehaviour:
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb70f15a88896e479a2c346d6dda028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 7.5
   chanting: {fileID: 3927653769234586576}
 --- !u!81 &8935177835831292453
 AudioListener:

@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         _input = new PlayerInput();
         _player = FindObjectOfType<Player>();
         _playerRB = _player.GetComponent<Rigidbody2D>();
