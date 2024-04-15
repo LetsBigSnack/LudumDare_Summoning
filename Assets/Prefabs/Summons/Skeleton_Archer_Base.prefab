@@ -195,6 +195,9 @@ MonoBehaviour:
   wiggleRoom: 1.25
   _isMelee: 0
   _currentState: 0
+  baseShader: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  dmgShader: {fileID: 2100000, guid: 0b69f08e887562447b96624dd57d595e, type: 2}
+  isDamaged: 0
 --- !u!195 &2089279150595464592
 NavMeshAgent:
   m_ObjectHideFlags: 0
