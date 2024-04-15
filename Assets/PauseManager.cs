@@ -11,12 +11,15 @@ public class PauseManager : MonoBehaviour
     private PlayerInput _input;
     private CursorFollow _cursorFollow;
     private SummonManager _summonManager;
+    private PauseMenuLocator _pauseMenuLocator;
+    
     
     public void Awake()
     { 
         _input = new PlayerInput();
         _cursorFollow = FindObjectOfType<CursorFollow>();
         _summonManager = FindObjectOfType<SummonManager>();
+        _pauseMenuLocator =  FindObjectOfType<PauseMenuLocator>(true);
     }
 
     private void OnEnable()
@@ -69,6 +72,7 @@ public class PauseManager : MonoBehaviour
     {
         _cursorFollow.gameObject.SetActive(false);
         _summonManager.gameObject.SetActive(false);
+        _pauseMenuLocator.gameObject.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
         canResume = true;
@@ -79,6 +83,7 @@ public class PauseManager : MonoBehaviour
     {
         _cursorFollow.gameObject.SetActive(true);
         _summonManager.gameObject.SetActive(true);
+        _pauseMenuLocator.gameObject.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
         canResume = true;
