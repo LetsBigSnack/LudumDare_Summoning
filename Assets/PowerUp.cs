@@ -13,13 +13,16 @@ public class PowerUp : MonoBehaviour
     private Player _player;
     private PlayerController _playerCon;
     private SummonManager _sumMan;
-
+    private TimeManager _timeManager;
+    
+    
     public void Start()
     {
 
         _player = FindObjectOfType<Player>();
         _playerCon = FindObjectOfType<PlayerController>();
         _sumMan = FindObjectOfType<SummonManager>();
+        _timeManager = FindObjectOfType<TimeManager>();
 
         if (_player != null && _playerCon != null) { 
             switch (valueToChange)
@@ -37,10 +40,7 @@ public class PowerUp : MonoBehaviour
                     _sumMan.SetMaxSummons((int)amountToChange);
                     break;
                 case "time":
-                    //timemanager call
-                    break;
-                case "points":
-                    //pointmanager call
+                    _timeManager.AddTime((int)amountToChange);
                     break;
             }
         } else
