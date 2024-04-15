@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int _attackDMG = 3;
     [SerializeField] private bool _canAttack = true;
     [SerializeField] private float _attackingCooldownTime = 3.0f;
+    public AudioSource attackSound;
     
     [Header("NavMash_Setting")]
     private NavMeshAgent _agentAi;
@@ -47,6 +48,12 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private List<GameObject> _possibleTargets;
     [SerializeField] private Transform _target;
     private float _enemyHitRange;
+
+    [Header("DamageIndication")]
+    public Material baseShader;
+    public Material dmgShader;
+    private SpriteRenderer _spriteRenderer;
+    public bool isDamaged;
 
 
     private Animator _enemyAnim;
@@ -81,6 +88,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {   
         _powerUpManager = FindObjectOfType<PowerUpManager>(true);
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _powerUpManager.applySet(this);
         _possibleTargets = new List<GameObject>();
         _target = FindObjectOfType<Player>().transform;
@@ -167,6 +175,7 @@ public class EnemyController : MonoBehaviour
     {
         _canAttack = false;
         _enemyAnim.Play("Attack");
+        attackSound.Play();
         yield return new WaitForSeconds(0.2f);
         HitObject();
         yield return new WaitForSeconds(_attackingCooldownTime);
@@ -192,6 +201,7 @@ public class EnemyController : MonoBehaviour
         if (!_isInvincible)
         {
             this._enemyHealth -= value;
+            StartCoroutine(FlashDMG());
             if (_canInvincible)
             {
                 StartCoroutine(SetInvinciblility());
@@ -204,7 +214,24 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private IEnumerator FlashDMG()
+    {
+        if (!isDamaged)
+        {
+            isDamaged = true;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            isDamaged = false;
+        }
+    }
+
     private IEnumerator SetInvinciblility()
     {
         _isInvincible = true;

@@ -766,6 +766,9 @@ MonoBehaviour:
   _isInvincible: 0
   _canInvincible: 1
   _invincibleCooldownTime: 4
+  baseShader: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  dmgShader: {fileID: 2100000, guid: 0b69f08e887562447b96624dd57d595e, type: 2}
+  isDamaged: 0
   isMoving: 0
 --- !u!114 &4917058146809753623
 MonoBehaviour:
