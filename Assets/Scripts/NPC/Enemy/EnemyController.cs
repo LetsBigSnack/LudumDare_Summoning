@@ -109,14 +109,15 @@ public class EnemyController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {  
-        
+    {
+        Debug.Log("COUNT"+_possibleTargets.Count);
         if (_possibleTargets.Count > 0)
         {
             _target = FindPriorityTarget();
         }
         else
         {
+            _target = FindObjectOfType<Player>().transform;
             _currentState = EnemyState.Walking;
         }
         
