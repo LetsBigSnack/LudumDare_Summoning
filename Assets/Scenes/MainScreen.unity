@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841695906795091087, guid: 18d60e13903bb964794d9424add7059f, type: 3}
+      propertyPath: maxSummons
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1094,6 +1098,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraZLayer: -10
+--- !u!114 &708391069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6780762277670930385, guid: 4dce7e502e9b12c4ea8ff196ba22acd1, type: 3}
+  m_PrefabInstance: {fileID: 1958645020}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &768071805
 GameObject:
   m_ObjectHideFlags: 0
@@ -10727,6 +10742,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 489f43b9ccf8931498793996e874a120, type: 3}
+--- !u!114 &1529044769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5927456138313991437, guid: 4dce7e502e9b12c4ea8ff196ba22acd1, type: 3}
+  m_PrefabInstance: {fileID: 1958645020}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696161175
 GameObject:
   m_ObjectHideFlags: 0
@@ -11488,6 +11514,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6943944690155974209, guid: 4dce7e502e9b12c4ea8ff196ba22acd1, type: 3}
+      propertyPath: maxSum
+      value: 
+      objectReference: {fileID: 1529044769}
+    - target: {fileID: 6943944690155974209, guid: 4dce7e502e9b12c4ea8ff196ba22acd1, type: 3}
+      propertyPath: currentSum
+      value: 
+      objectReference: {fileID: 708391069}
     - target: {fileID: 6980836584098564463, guid: 4dce7e502e9b12c4ea8ff196ba22acd1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
