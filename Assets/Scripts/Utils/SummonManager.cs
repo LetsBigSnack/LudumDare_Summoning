@@ -23,6 +23,9 @@ public class SummonManager : MonoBehaviour
     private int maxSummons = 30;
 
     private PauseManager _pauseManager;
+    private DisplaySummonManager _summonHolder;
+    
+    
     
     public void Awake()
     { 
@@ -31,6 +34,9 @@ public class SummonManager : MonoBehaviour
         _cursorFollow = FindObjectOfType<CursorFollow>();
         selectedSummon = Summons[0];
         _pauseManager = FindObjectOfType<PauseManager>();
+        _summonHolder = FindObjectOfType<DisplaySummonManager>(true);
+        
+        DisplaySummon();
     }
 
     public void LateUpdate()
@@ -85,6 +91,31 @@ public class SummonManager : MonoBehaviour
         }
 
         selectedSummon = Summons[_summonIndex];
+        DisplaySummon();
+
+    }
+
+    void DisplaySummon()
+    {
+        _summonHolder.SetCurrent(selectedSummon.GetComponent<SummonsController>());
+
+        if (_summonIndex + 1 >= Summons.Count)
+        {
+            _summonHolder.SetNext(Summons[0].GetComponent<SummonsController>());
+        }
+        else
+        {
+            _summonHolder.SetNext(Summons[_summonIndex+1].GetComponent<SummonsController>());
+        }
+        
+        if (_summonIndex - 1 < 0)
+        {
+            _summonHolder.SetPrevious(Summons[Summons.Count-1].GetComponent<SummonsController>());
+        }
+        else
+        {
+            _summonHolder.SetPrevious(Summons[_summonIndex - 1].GetComponent<SummonsController>());
+        }
     }
 
     void SpawnSummon(InputAction.CallbackContext value)
@@ -106,6 +137,7 @@ public class SummonManager : MonoBehaviour
         }
 
         selectedSummon = Summons[_summonIndex];
+        DisplaySummon();
     }
     
     void ToggleSummonDown(InputAction.CallbackContext value)
@@ -118,6 +150,7 @@ public class SummonManager : MonoBehaviour
         }
 
         selectedSummon = Summons[_summonIndex];
+        DisplaySummon();
     }
     
     public void SetMaxSummons(int value)

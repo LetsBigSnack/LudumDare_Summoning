@@ -52,7 +52,7 @@ MonoBehaviour:
   _summonHealth: 100
   _summonMaxHealth: 100
   _isSummonDead: 0
-  _summonSpeed: 0
+  _summonSpeed: 1
   _bloodCost: 10
   _invincibleTime: 10
   _isInvincible: 0

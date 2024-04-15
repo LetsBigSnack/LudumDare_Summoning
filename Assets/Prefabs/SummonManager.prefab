@@ -48,6 +48,7 @@ MonoBehaviour:
   Summons:
   - {fileID: 2389147499904859062, guid: 9a1cf411ae17d96488fded441c8e58e2, type: 3}
   - {fileID: 5204857691576133462, guid: 1803dedd6aea62a428203c4e420b0c01, type: 3}
+  - {fileID: 6095843992783259732, guid: 750406825bbbff44b8b417a9d0c4ffa0, type: 3}
   selectedSummon: {fileID: 0}
   _spawnedSummons: []
   maxSummons: 100
