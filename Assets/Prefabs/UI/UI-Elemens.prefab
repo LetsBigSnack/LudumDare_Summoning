@@ -3011,6 +3011,8 @@ MonoBehaviour:
   - {fileID: 3075506241889797933}
   - {fileID: 5927553635542617167}
   - {fileID: 1748843271007936634}
+  currentSum: {fileID: 6780762277670930385}
+  maxSum: {fileID: 5927456138313991437}
 --- !u!1 &2638974401903561191
 GameObject:
   m_ObjectHideFlags: 0

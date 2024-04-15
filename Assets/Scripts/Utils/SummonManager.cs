@@ -45,6 +45,8 @@ public class SummonManager : MonoBehaviour
     public void LateUpdate()
     {
         _spawnedSummons = FindObjectsByType<SummonsController>(FindObjectsSortMode.None).ToList();
+        _summonHolder.currentSum.text = _spawnedSummons.Count.ToString();
+        _summonHolder.maxSum.text = maxSummons.ToString();
     }
 
     private void OnEnable()

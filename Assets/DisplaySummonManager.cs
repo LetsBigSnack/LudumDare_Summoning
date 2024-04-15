@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplaySummonManager : MonoBehaviour
 {
     public List<SummonHolder> SummonHolders;
+    public TextMeshProUGUI currentSum;
+    public TextMeshProUGUI maxSum;
     
     public void SetCurrent(SummonsController summon)
     {

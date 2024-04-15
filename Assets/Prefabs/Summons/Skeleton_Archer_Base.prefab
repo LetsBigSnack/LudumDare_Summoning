@@ -177,19 +177,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb493808ec76a5b46a77daa147172287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _summonHealth: 100
-  _summonMaxHealth: 100
+  _summonHealth: 40
+  _summonMaxHealth: 40
   _isSummonDead: 0
-  _summonSpeed: 2.5
+  _summonSpeed: 1.5
   _bloodCost: 10
-  _invincibleTime: 10
+  _invincibleTime: 0.5
   _isInvincible: 0
   _canInvincible: 1
   _invincibleCooldownTime: 3
   _attackRange: 10
-  _attackDMG: 3
+  _attackDMG: 5
   _canAttack: 1
-  _attackingCooldownTime: 3
+  _attackingCooldownTime: 5
   attackSound:
   - {fileID: 501834367147956549}
   wiggleRoom: 1.25

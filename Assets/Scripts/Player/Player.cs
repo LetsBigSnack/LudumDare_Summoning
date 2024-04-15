@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
     void GetNewLevelThreshold()
     {
         _deathUiManager.level = _playerLevel;
-        _xpToNextLevel = _playerLevel * _playerLevel * 50;
+        _xpToNextLevel = _playerLevel * _playerLevel * 30;
     }
     
     // Update is called once per frame
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
 
     public void AddBlood(int bloodValue)
     {
-        _bloodMeter += bloodValue;
+        _bloodMeter += 2*bloodValue;
         _currentXP += bloodValue * 10;
         _deathUiManager.ratsSacrificed++;
         if (_currentXP >= _xpToNextLevel)

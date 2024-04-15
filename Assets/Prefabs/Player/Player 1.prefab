@@ -809,14 +809,14 @@ MonoBehaviour:
   _xpToNextLevel: 100
   hasLeveledUp: 0
   _bloodMeter: 0
-  _bloodMeterMax: 100
+  _bloodMeterMax: 40
   _playerHealth: 100
   _playerMaxHealth: 100
   _isPlayerDead: 0
   _invincibleTime: 0.5
   _isInvincible: 0
   _canInvincible: 1
-  _invincibleCooldownTime: 4
+  _invincibleCooldownTime: 2
   baseShader: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   dmgShader: {fileID: 2100000, guid: 0b69f08e887562447b96624dd57d595e, type: 2}
   isDamaged: 0
