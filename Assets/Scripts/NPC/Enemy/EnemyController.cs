@@ -109,7 +109,12 @@ public class EnemyController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {  
+    {
+
+        if (_target == null)
+        {
+            _target = FindPriorityTarget();
+        }
         
         if (_possibleTargets.Count > 0)
         {
