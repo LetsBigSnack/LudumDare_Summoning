@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float playerSpeed = 10f;
-    
+    private float savedPlayerSpeed;
     
     
     private PlayerInput _input;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerAnim = GetComponentInChildren<Animator>();
         _input = new PlayerInput();
+        savedPlayerSpeed = playerSpeed;
     }
 
     private void Awake()
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         _player.SetSacrifice(true);
         _playerAnim.SetBool("isCharging", true);
+        savedPlayerSpeed = playerSpeed;
         playerSpeed = 3f;
     }
 
@@ -120,11 +122,12 @@ public class PlayerController : MonoBehaviour
     {
         _player.SetSacrifice(false);
         _playerAnim.SetBool("isCharging", false);
-        playerSpeed = 10f;
+        playerSpeed = savedPlayerSpeed;
     }
     
     public void SetSpeed(int value)
     {
         playerSpeed += value;
+        savedPlayerSpeed += value;
     }
 }
