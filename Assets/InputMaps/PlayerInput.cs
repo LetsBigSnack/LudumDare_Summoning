@@ -428,6 +428,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""2d719eb9-c250-44e5-a4d3-0d0c4a3a7488"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Replay"",
+                    ""type"": ""Button"",
+                    ""id"": ""e43ee5bd-b54b-4c12-9590-b605fd4e29bd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -463,6 +481,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""PowerUp_3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00341bb3-d04d-4e5b-bd59-33feb5b0f250"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00877f00-d9f4-4230-891f-070f9fa34bea"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Replay"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -485,6 +525,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Menu_PowerUp_1 = m_Menu.FindAction("PowerUp_1", throwIfNotFound: true);
         m_Menu_PowerUp_2 = m_Menu.FindAction("PowerUp_2", throwIfNotFound: true);
         m_Menu_PowerUp_3 = m_Menu.FindAction("PowerUp_3", throwIfNotFound: true);
+        m_Menu_MainMenu = m_Menu.FindAction("MainMenu", throwIfNotFound: true);
+        m_Menu_Replay = m_Menu.FindAction("Replay", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -659,6 +701,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Menu_PowerUp_1;
     private readonly InputAction m_Menu_PowerUp_2;
     private readonly InputAction m_Menu_PowerUp_3;
+    private readonly InputAction m_Menu_MainMenu;
+    private readonly InputAction m_Menu_Replay;
     public struct MenuActions
     {
         private @PlayerInput m_Wrapper;
@@ -666,6 +710,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @PowerUp_1 => m_Wrapper.m_Menu_PowerUp_1;
         public InputAction @PowerUp_2 => m_Wrapper.m_Menu_PowerUp_2;
         public InputAction @PowerUp_3 => m_Wrapper.m_Menu_PowerUp_3;
+        public InputAction @MainMenu => m_Wrapper.m_Menu_MainMenu;
+        public InputAction @Replay => m_Wrapper.m_Menu_Replay;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -684,6 +730,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @PowerUp_3.started += instance.OnPowerUp_3;
             @PowerUp_3.performed += instance.OnPowerUp_3;
             @PowerUp_3.canceled += instance.OnPowerUp_3;
+            @MainMenu.started += instance.OnMainMenu;
+            @MainMenu.performed += instance.OnMainMenu;
+            @MainMenu.canceled += instance.OnMainMenu;
+            @Replay.started += instance.OnReplay;
+            @Replay.performed += instance.OnReplay;
+            @Replay.canceled += instance.OnReplay;
         }
 
         private void UnregisterCallbacks(IMenuActions instance)
@@ -697,6 +749,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @PowerUp_3.started -= instance.OnPowerUp_3;
             @PowerUp_3.performed -= instance.OnPowerUp_3;
             @PowerUp_3.canceled -= instance.OnPowerUp_3;
+            @MainMenu.started -= instance.OnMainMenu;
+            @MainMenu.performed -= instance.OnMainMenu;
+            @MainMenu.canceled -= instance.OnMainMenu;
+            @Replay.started -= instance.OnReplay;
+            @Replay.performed -= instance.OnReplay;
+            @Replay.canceled -= instance.OnReplay;
         }
 
         public void RemoveCallbacks(IMenuActions instance)
@@ -731,5 +789,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPowerUp_1(InputAction.CallbackContext context);
         void OnPowerUp_2(InputAction.CallbackContext context);
         void OnPowerUp_3(InputAction.CallbackContext context);
+        void OnMainMenu(InputAction.CallbackContext context);
+        void OnReplay(InputAction.CallbackContext context);
     }
 }
