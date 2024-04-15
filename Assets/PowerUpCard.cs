@@ -26,11 +26,15 @@ public class PowerUpCard : MonoBehaviour
     public TextMeshProUGUI negTitel;
     public TextMeshProUGUI negDescription;
 
+    public GameObject gameplayUsed;
+    
+    private CursorFollow _cursorFollow;
     // Start is called before the first frame update
 
     private void Awake()
     {
         _player = FindObjectOfType<Player>();
+        _cursorFollow = FindObjectOfType<CursorFollow>(true);
     }
 
     private void OnDisable()
@@ -40,6 +44,7 @@ public class PowerUpCard : MonoBehaviour
     }
     void Update()
     {
+        ShowGamePad();
         posTitel.text = powerUp.titel;
         posDescription.text = powerUp.description;
 
@@ -63,4 +68,10 @@ public class PowerUpCard : MonoBehaviour
     {
         powerUpMenu.SetActive(false);
     }
+
+    public void ShowGamePad()
+    {
+        gameplayUsed.SetActive(_cursorFollow.isGamepadUsed);
+    }
+    
 }
