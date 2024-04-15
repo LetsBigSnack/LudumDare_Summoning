@@ -297,13 +297,16 @@ MonoBehaviour:
   _canInvincible: 1
   _invincibleCooldownTime: 3
   _attackRange: 2
-  _attackDMG: 1000
+  _attackDMG: 10
   _canAttack: 1
   _attackingCooldownTime: 3
   attackSound: {fileID: 5450903690937606850}
   wiggleRoom: 2
   _possibleTargets: []
   _target: {fileID: 0}
+  baseShader: {fileID: 0}
+  dmgShader: {fileID: 0}
+  isDamaged: 0
   _currentState: 0
 --- !u!195 &1432826606058020105
 NavMeshAgent:
