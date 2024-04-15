@@ -33,12 +33,19 @@ public class Player : MonoBehaviour
     [SerializeField] private bool _isInvincible = false;
     [SerializeField] private bool _canInvincible = true;
     [SerializeField] private float _invincibleCooldownTime = 3.0f;
+
+    [Header("DamageIndication")]
+    public Material baseShader;
+    public Material dmgShader;
+    private SpriteRenderer _spriteRenderer;
+    public bool isDamaged;
     
     public bool isMoving;
     
     // Start is called before the first frame update
     void Start()
     {
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _deathUiManager = FindObjectOfType<DeathUiManager>(true);
         _deathUiManager.level = _playerLevel;
         GetNewLevelThreshold();
@@ -153,6 +160,7 @@ public class Player : MonoBehaviour
         if (!_isInvincible)
         {
             this._playerHealth -= value;
+            StartCoroutine(FlashDMG());
             if (_canInvincible)
             {
                 StartCoroutine(SetInvinciblility());
@@ -162,6 +170,23 @@ public class Player : MonoBehaviour
         if (_playerHealth <= 0)
         {
             _isPlayerDead = true;
+        }
+    }
+
+    private IEnumerator FlashDMG()
+    {
+        if (!isDamaged)
+        {
+            isDamaged = true;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            isDamaged = false;
         }
     }
     
