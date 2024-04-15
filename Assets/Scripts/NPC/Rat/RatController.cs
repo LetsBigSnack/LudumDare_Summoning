@@ -18,6 +18,10 @@ public class RatController : MonoBehaviour
 
     [Header("Target")]
     private Transform _player;
+
+    [Header("Sounds")]
+    public AudioSource[] sounds;
+    private bool _canPlaySound = true;
     
 
     // Start is called before the first frame update
@@ -32,6 +36,7 @@ public class RatController : MonoBehaviour
         _agentAi.updateRotation = false;
         _agentAi.updateUpAxis = false;
         _agentAi.avoidancePriority = 0;
+        StartCoroutine(MakeSound());
         
         pointOfInterest = _locationManager.GetRandomPointOnNavMesh(this.transform);
     }
@@ -53,6 +58,11 @@ public class RatController : MonoBehaviour
             _agentAi.SetDestination(pointOfInterest);
             TravelToDestination();
         }
+    }
+
+    private void PlaySound()
+    {
+        sounds[Random.Range(0, sounds.Length - 1)].Play();
     }
     
     private void SetAnimation()
@@ -81,5 +91,18 @@ public class RatController : MonoBehaviour
     void SwitchTarget()
     {
         pointOfInterest = _locationManager.GetRandomPointOnNavMesh(this.transform);
+    }
+
+    public IEnumerator MakeSound()
+    {
+        if (_canPlaySound)
+        {
+            _canPlaySound = false;
+            yield return new WaitForSeconds((float)Random.Range(10, 30));
+            PlaySound();
+            yield return new WaitForSeconds((float)Random.Range(10, 30));
+            _canPlaySound = true;
+            StartCoroutine(MakeSound());
+        }
     }
 }
