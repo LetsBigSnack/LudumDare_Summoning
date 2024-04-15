@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _playerAnim = GetComponentInChildren<Animator>();
         _input = new PlayerInput();
         savedPlayerSpeed = playerSpeed;
     }
@@ -33,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Time.timeScale = 1;
         _input = new PlayerInput();
+        _playerAnim = GetComponentInChildren<Animator>();
         _player = FindObjectOfType<Player>();
         _playerRB = _player.GetComponent<Rigidbody2D>();
     }

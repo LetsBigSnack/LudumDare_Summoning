@@ -48,6 +48,12 @@ public class SummonsController : MonoBehaviour
     private Animator _summonAnim;
     public SummonState _currentState = SummonState.Following;
 
+    [Header("DamageIndication")]
+    public Material baseShader;
+    public Material dmgShader;
+    private SpriteRenderer _spriteRenderer;
+    public bool isDamaged;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +73,7 @@ public class SummonsController : MonoBehaviour
         {
             _spawner = GetComponentInChildren<ProjectileSpawner>();
         }
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _summonAnim = GetComponentInChildren<Animator>();
         _agentAi = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _agentAi.updateRotation = false;
@@ -209,6 +216,7 @@ public class SummonsController : MonoBehaviour
         if (!_isInvincible)
         {
             this._summonHealth -= value;
+            StartCoroutine(FlashDMG());
             if (_canInvincible)
             {
                 StartCoroutine(SetInvinciblility());
@@ -219,6 +227,23 @@ public class SummonsController : MonoBehaviour
         {
             _isSummonDead = true;
             Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator FlashDMG()
+    {
+        if (!isDamaged)
+        {
+            isDamaged = true;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = dmgShader;
+            yield return new WaitForSeconds(0.1f);
+            _spriteRenderer.material = baseShader;
+            isDamaged = false;
         }
     }
 
