@@ -14,4 +14,10 @@ public class ChangeScene : MonoBehaviour
         InputSystem.DisableAllEnabledActions();
         SceneManager.LoadScene(sceneName);
     }
+
+
+    public void Resume()
+    {
+        FindObjectOfType<PauseManager>().ResumeGame();
+    }
 }
