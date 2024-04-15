@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum SummonState
 {
+    Idling,
     Following,
     Attacking
 }
@@ -101,6 +102,23 @@ public class SummonsController : MonoBehaviour
 
             switch (_currentState)
             {
+                case SummonState.Idling:
+
+                    if (IsTargetInRange() && !_canAttack)
+                    {
+                        _summonAnim.SetBool("isMoving", false);
+                    }
+                    else if (IsTargetInRange() && _canAttack)
+                    {
+                        _currentState = SummonState.Attacking;
+                    } 
+                    else if(!IsTargetInRange())
+                    {
+                        _currentState = SummonState.Attacking;
+                    }
+
+                    break;
+
                 case SummonState.Following:
 
                     if (!IsTargetInRange())
@@ -126,12 +144,17 @@ public class SummonsController : MonoBehaviour
 
                             if (_canAttack)
                             {
+                                _summonAnim.SetBool("isMoving", false);
                                 StartCoroutine(Attack());
                             }
                         }
-                        else
+                        else if(!IsTargetInRange())
                         {
                             _currentState = SummonState.Following;
+                        } 
+                        else if (IsTargetInRange() && !_canAttack)
+                        {
+                            _currentState = SummonState.Idling;
                         }
                     }
 
