@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    private float _remainingTime = 120;
+    private float _remainingTime = 300;
     
     // Update is called once per frame
     void Update()
