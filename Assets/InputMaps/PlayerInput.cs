@@ -397,6 +397,74 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""188efc5d-fe36-4b75-bbd6-b4c71b96c049"",
+            ""actions"": [
+                {
+                    ""name"": ""PowerUp_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""67431d37-b8ae-4d24-b620-1911dd7cfd7e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PowerUp_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""25421d9b-c35f-491c-b47a-e952d7983d3e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PowerUp_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""80819b00-f3bf-476e-992c-ef7ea88f6376"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6cd8edae-ab6c-4753-b91a-b9897703b6a2"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerUp_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5279db1-9105-4644-ad4a-c6aae2b82960"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerUp_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a599b40e-1d13-4a13-b54c-15b5436ba80f"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PowerUp_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -412,6 +480,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_ToggleUp = m_Player.FindAction("ToggleUp", throwIfNotFound: true);
         m_Player_ToggleDown = m_Player.FindAction("ToggleDown", throwIfNotFound: true);
         m_Player_TogglePause = m_Player.FindAction("TogglePause", throwIfNotFound: true);
+        // Menu
+        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+        m_Menu_PowerUp_1 = m_Menu.FindAction("PowerUp_1", throwIfNotFound: true);
+        m_Menu_PowerUp_2 = m_Menu.FindAction("PowerUp_2", throwIfNotFound: true);
+        m_Menu_PowerUp_3 = m_Menu.FindAction("PowerUp_3", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -579,6 +652,68 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
+    private readonly InputAction m_Menu_PowerUp_1;
+    private readonly InputAction m_Menu_PowerUp_2;
+    private readonly InputAction m_Menu_PowerUp_3;
+    public struct MenuActions
+    {
+        private @PlayerInput m_Wrapper;
+        public MenuActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PowerUp_1 => m_Wrapper.m_Menu_PowerUp_1;
+        public InputAction @PowerUp_2 => m_Wrapper.m_Menu_PowerUp_2;
+        public InputAction @PowerUp_3 => m_Wrapper.m_Menu_PowerUp_3;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void AddCallbacks(IMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Add(instance);
+            @PowerUp_1.started += instance.OnPowerUp_1;
+            @PowerUp_1.performed += instance.OnPowerUp_1;
+            @PowerUp_1.canceled += instance.OnPowerUp_1;
+            @PowerUp_2.started += instance.OnPowerUp_2;
+            @PowerUp_2.performed += instance.OnPowerUp_2;
+            @PowerUp_2.canceled += instance.OnPowerUp_2;
+            @PowerUp_3.started += instance.OnPowerUp_3;
+            @PowerUp_3.performed += instance.OnPowerUp_3;
+            @PowerUp_3.canceled += instance.OnPowerUp_3;
+        }
+
+        private void UnregisterCallbacks(IMenuActions instance)
+        {
+            @PowerUp_1.started -= instance.OnPowerUp_1;
+            @PowerUp_1.performed -= instance.OnPowerUp_1;
+            @PowerUp_1.canceled -= instance.OnPowerUp_1;
+            @PowerUp_2.started -= instance.OnPowerUp_2;
+            @PowerUp_2.performed -= instance.OnPowerUp_2;
+            @PowerUp_2.canceled -= instance.OnPowerUp_2;
+            @PowerUp_3.started -= instance.OnPowerUp_3;
+            @PowerUp_3.performed -= instance.OnPowerUp_3;
+            @PowerUp_3.canceled -= instance.OnPowerUp_3;
+        }
+
+        public void RemoveCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -590,5 +725,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnToggleUp(InputAction.CallbackContext context);
         void OnToggleDown(InputAction.CallbackContext context);
         void OnTogglePause(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnPowerUp_1(InputAction.CallbackContext context);
+        void OnPowerUp_2(InputAction.CallbackContext context);
+        void OnPowerUp_3(InputAction.CallbackContext context);
     }
 }
