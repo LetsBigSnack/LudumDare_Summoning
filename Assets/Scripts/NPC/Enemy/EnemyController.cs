@@ -87,6 +87,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        transform.rotation = Quaternion.identity;
         _powerUpManager = FindObjectOfType<PowerUpManager>(true);
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _powerUpManager.applySet(this);
@@ -99,6 +100,7 @@ public class EnemyController : MonoBehaviour
         _agentAi.updateUpAxis = false;
         _agentAi.avoidancePriority = 0;
         _agentAi.speed = _enemySpeed;
+        
     }
 
     private void Update()
