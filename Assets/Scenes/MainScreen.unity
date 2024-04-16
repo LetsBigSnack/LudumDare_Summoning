@@ -1136,6 +1136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
+      propertyPath: _bloodMeter
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4451401891827969385, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.04
