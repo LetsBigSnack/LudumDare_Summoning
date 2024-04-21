@@ -21,9 +21,18 @@ public class Rat : MonoBehaviour
         if (!_isBeingSacrificed)
         {
             _isBeingSacrificed = true;
-            StartCoroutine(MoveAndRotateCoroutine());
-            StartCoroutine(GetSacrificed()); 
+            //StartCoroutine(MoveAndRotateCoroutine());
+            //StartCoroutine(GetSacrificed()); 
+            SacrificeTest();
         }
+    }
+
+    public void SacrificeTest()
+    {
+        Vector3 pos = transform.position;
+        Quaternion rotation = Quaternion.identity;
+        Instantiate(prefabBlood, pos, rotation);
+        Destroy(gameObject);
     }
 
     public bool GetBeingSacrificed()
