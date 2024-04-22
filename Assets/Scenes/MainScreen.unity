@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841695906795091087, guid: 18d60e13903bb964794d9424add7059f, type: 3}
       propertyPath: maxSummons
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1138,11 +1138,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: _bloodMeter
-      value: 100
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: _bloodMeterMax
-      value: 100
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4451401891827969385, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: m_LocalPosition.x
