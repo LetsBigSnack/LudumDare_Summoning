@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841695906795091087, guid: 18d60e13903bb964794d9424add7059f, type: 3}
+      propertyPath: maxSummons
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1134,7 +1138,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: _bloodMeter
-      value: 40
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 478429551442071484, guid: 9620691dfec867243934c24990f767f7, type: 3}
+      propertyPath: _bloodMeterMax
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4451401891827969385, guid: 9620691dfec867243934c24990f767f7, type: 3}
       propertyPath: m_LocalPosition.x
