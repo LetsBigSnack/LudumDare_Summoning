@@ -56,7 +56,7 @@ public class Blood : MonoBehaviour
 
     public IEnumerator EnableHitBox()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         hitbox.SetActive(true);
     }
     
