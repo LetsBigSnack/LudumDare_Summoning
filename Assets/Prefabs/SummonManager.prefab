@@ -51,4 +51,4 @@ MonoBehaviour:
   - {fileID: 6095843992783259732, guid: 750406825bbbff44b8b417a9d0c4ffa0, type: 3}
   selectedSummon: {fileID: 0}
   _spawnedSummons: []
-  maxSummons: 100
+  maxSummons: 10

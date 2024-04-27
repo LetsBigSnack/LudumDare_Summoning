@@ -18,12 +18,16 @@ public class Blood : MonoBehaviour
 
     public AudioSource splatter;
 
+    public GameObject hitbox;
+
 
     public void Start()
     {
+
         _player = FindObjectOfType<Player>().transform;
         PlaySound();
         StartCoroutine(Die());
+        StartCoroutine(EnableHitBox());
     }
 
     public void FixedUpdate()
@@ -48,6 +52,12 @@ public class Blood : MonoBehaviour
     {
         yield return new WaitForSeconds(_TTD);
         Destroy(gameObject);
+    }
+
+    public IEnumerator EnableHitBox()
+    {
+        yield return new WaitForSeconds(0.5f);
+        hitbox.SetActive(true);
     }
     
 }

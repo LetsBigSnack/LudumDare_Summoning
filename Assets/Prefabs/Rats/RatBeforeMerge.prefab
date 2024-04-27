@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb59c9f4701944c8d5a06bb7ea5c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBlood: {fileID: 3984170058200992631, guid: e6bca2db773f7634d9432132204e9492, type: 3}
+  prefabBlood: {fileID: 4195122454528167767, guid: 0cc929b7224011d4f8e5dcff4e0329ce, type: 3}
   _isBeingSacrificed: 0
   sacrificeTime: 2
   speed: 30
@@ -353,7 +353,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 3
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -388,7 +388,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
